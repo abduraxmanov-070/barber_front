@@ -7,7 +7,7 @@
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
             <div class="mb-5 element-animate">
-              <img src="../assets/images/banner_text_1.png" alt="Image placeholder" class="img-md-fluid"/>
+              <img src="../assets/images/banner_text_1.png" alt="Image placeholder" class="img-md-fluid h-100"/>
             </div>
 
           </div>
@@ -294,18 +294,18 @@
     </section>
 
     <!-- END section -->
-<table border="1px">
-  <tr>
-    <td>barber_id</td>
-    <td>cost</td>
-    <td>services</td>
-  </tr>
-  <tr v-for="item in list" v-bind:key="item.id">
-    <td>{{item.barber_id}}</td>
-    <td>{{item.cost}}</td>
-    <td>{{item.services_name}}</td>
-  </tr>
-</table>
+<!--<table border="1px">-->
+<!--  <tr>-->
+<!--    <td>barber_id</td>-->
+<!--    <td>cost</td>-->
+<!--    <td>services</td>-->
+<!--  </tr>-->
+<!--  <tr v-for="item in list" v-bind:key="item.id">-->
+<!--    <td>{{item.barber_id}}</td>-->
+<!--    <td>{{item.cost}}</td>-->
+<!--    <td>{{item.services_name}}</td>-->
+<!--  </tr>-->
+<!--</table>-->
 
 
   </div>

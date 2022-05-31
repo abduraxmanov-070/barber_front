@@ -188,7 +188,7 @@
 
 <script>
 export default {
-  name: 'About',
+  name: 'hairstyle',
   data () {
     return {
       msg: 'Welcome to About page'
