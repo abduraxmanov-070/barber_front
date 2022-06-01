@@ -10,12 +10,14 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.6.2",
     "axios": "^0.27.2",
     "node-sass": "^7.0.1",
     "owl.carousel": "^2.3.4",
     "vue": "^2.5.2",
     "vue-axios": "^3.4.1",
     "vue-owl-carousel": "^2.0.3",
+    "vue-recaptcha": "^2.0.2",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

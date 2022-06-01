@@ -98,7 +98,7 @@
 
 
 </template>
-
+<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>
 <script>
 import './assets/js/jquery-3.2.1.min';
 import './assets/js/jquery-migrate-3.0.0';
