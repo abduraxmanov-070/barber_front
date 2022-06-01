@@ -4,6 +4,7 @@ import Home from "../components/Home"
 import About from "../components/About"
 import Contact from "../components/Contact"
 import HairStyle from "../components/HairStyle";
+import Booking from "../components/Booking";
 //styles
 // import "../assets/css/style.css";
 // import "../assets/css/animate.css";
@@ -33,7 +34,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
+      name: 'home',
       component: Home
     },
     {
@@ -50,6 +51,11 @@ export default new Router({
       path: '/contact',
       name: 'contact',
       component: Contact
+    },
+    {
+      path: '/booking',
+      name: 'booking',
+      component: Booking
     },
   ]
 })

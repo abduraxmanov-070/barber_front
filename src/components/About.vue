@@ -7,9 +7,7 @@
           <div class="col-md-8 text-center">
 
             <div class="mb-5 element-animate">
-               <img src="images/banner_text_1.png" alt="Image placeholder" class="img-md-fluid">
               <h1 class="mb-4">About Us</h1>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, quo!</p>
             </div>
           </div>
         </div>
@@ -121,7 +119,7 @@
 
 <script>
 export default {
-  name: 'About',
+  name: 'about',
   data () {
     return {
       msg: 'Welcome to About page'

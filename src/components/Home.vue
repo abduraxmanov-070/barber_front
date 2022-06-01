@@ -7,7 +7,6 @@
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
             <div class="mb-5 element-animate">
-              <img src="../assets/images/banner_text_1.png" alt="Image placeholder" class="img-md-fluid h-100"/>
             </div>
 
           </div>
@@ -54,141 +53,6 @@
       </div>
     </section>
     <!-- END section -->
-
-
-    <section class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 pr-5">
-
-            <h2 class="mb-3">Services</h2>
-            <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-
-            <div class="mb-3 custom-nav">
-              <a href="#" class="btn btn-primary btn-sm custom-prev mr-2 mb-2"><span class="ion-android-arrow-back"></span></a>
-              <a href="#" class="btn btn-primary btn-sm custom-next mr-2 mb-2"><span class="ion-android-arrow-forward"></span></a>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-              <div class="col-md-12 slider-wrap">
-                <div class="owl-carousel owl-theme no-nav js-carousel-1">
-
-                  <a href="#" class="img-bg" :style="{backgroundImage: 'url('+require('../assets/images/img_2.jpg')+')'}">
-<!--                     style="background-image: url('../assets/images/img_2.jpg')">-->
-                    <div class="text">
-                      <span class="icon custom-icon flaticon-scissors"></span>
-                      <h2>Haircuting</h2>
-                      <p>Read More</p>
-                    </div>
-                  </a>
-
-                  <a href="#" class="img-bg" :style="{backgroundImage: 'url('+require('../assets/images/img_1.jpg')+')'}">
-<!--                    style="background-image: url('../assets/images/img_1.jpg')">-->
-                    <div class="text">
-                      <span class="icon custom-icon flaticon-scissors"></span>
-                      <h2>Beard Shaving</h2>
-                      <p>Read More</p>
-                    </div>
-                  </a>
-
-                  <a href="#" class="img-bg last" :style="{backgroundImage: 'url('+require('../assets/images/img_3.jpg')+')'}">
-<!--                    style="background-image: url('../assets/images/img_3.jpg')">-->
-                    <div class="text">
-                      <span class="icon custom-icon flaticon-scissors"></span>
-                      <h2>Cream &amp; Shampoo</h2>
-                      <p>Read More</p>
-                    </div>
-                  </a>
-
-                  <a href="#" class="img-bg" :style="{backgroundImage: 'url('+require('../assets/images/img_2.jpg')+')'}">
-<!--                    style="background-image: url('../assets/images/img_2.jpg')">-->
-                    <div class="text">
-                      <span class="icon custom-icon flaticon-scissors"></span>
-                      <h2>Haircuting</h2>
-                      <p>Read More</p>
-                    </div>
-                  </a>
-
-                  <a href="#" class="img-bg" :style="{backgroundImage: 'url('+require('../assets/images/img_3.jpg')+')'}">
-<!--                    style="background-image: url('../assets/images/img_1.jpg')">-->
-                    <div class="text">
-                      <span class="icon custom-icon flaticon-scissors"></span>
-                      <h2>Beard Shaving</h2>
-                      <p>Read More</p>
-                    </div>
-                  </a>
-
-                  <a href="#" class="img-bg last" :style="{backgroundImage: 'url('+require('../assets/images/img_3.jpg')+')'}">
-<!--                    style="background-image: url('../assets/images/img_3.jpg')">-->
-                    <div class="text">
-                      <span class="icon custom-icon flaticon-scissors"></span>
-                      <h2>Cream &amp; Shampoo</h2>
-                      <p>Read More</p>
-                    </div>
-                  </a>
-                  <a href="#" class="img-bg" :style="{backgroundImage: 'url('+require('../assets/images/img_2.jpg')+')'}">
-<!--                    style="background-image: url('../assets/images/img_2.jpg')">-->
-                    <div class="text">
-                      <span class="icon custom-icon flaticon-scissors"></span>
-                      <h2>Haircuting</h2>
-                      <p>Read More</p>
-                    </div>
-                  </a>
-
-                  <a href="#" class="img-bg" :style="{backgroundImage: 'url('+require('../assets/images/img_1.jpg')+')'}">
-<!--                    style="background-image: url('../assets/images/img_1.jpg')">-->
-                    <div class="text">
-                      <span class="icon custom-icon flaticon-scissors"></span>
-                      <h2>Beard Shaving</h2>
-                      <p>Read More</p>
-                    </div>
-                  </a>
-
-                  <a href="#" class="img-bg last" :style="{backgroundImage: 'url('+require('../assets/images/img_3.jpg')+')'}">
-<!--                    style="background-image: url('../assets/images/img_3.jpg')">-->
-                    <div class="text">
-                      <span class="icon custom-icon flaticon-scissors"></span>
-                      <h2>Cream &amp; Shampoo</h2>
-                      <p>Read More</p>
-                    </div>
-                  </a>
-                  <a href="#" class="img-bg" :style="{backgroundImage: 'url('+require('../assets/images/img_2.jpg')+')'}">
-<!--                    style="background-image: url('../assets/images/img_2.jpg')">-->
-                    <div class="text">
-                      <span class="icon custom-icon flaticon-scissors"></span>
-                      <h2>Haircuting</h2>
-                      <p>Read More</p>
-                    </div>
-                  </a>
-
-                  <a href="#" class="img-bg" :style="{backgroundImage: 'url('+require('../assets/images/img_1.jpg')+')'}">
-<!--                    style="background-image: url('../assets/images/img_1.jpg')">-->
-                    <div class="text">
-                      <span class="icon custom-icon flaticon-scissors"></span>
-                      <h2>Beard Shaving</h2>
-                      <p>Read More</p>
-                    </div>
-                  </a>
-
-                  <a href="#" class="img-bg last" :style="{backgroundImage: 'url('+require('../assets/images/img_3.jpg')+')'}">
-<!--                    style="background-image: url('../assets/images/img_3.jpg')">-->
-                    <div class="text">
-                      <span class="icon custom-icon flaticon-scissors"></span>
-                      <h2>Cream &amp; Shampoo</h2>
-                      <p>Read More</p>
-                    </div>
-                  </a>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-
     <section class="site-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
@@ -275,19 +139,6 @@
             <p class="lead">Start with us today</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facere a excepturi quod impedit rerum ipsum totam incidunt, necessitatibus id veritatis maiores quos saepe dolore commodi magnam fugiat. Incidunt, omnis.</p>
             <p>Nobis quae eaque facere architecto eligendi, voluptas quasi, blanditiis aperiam possimus inventore quis nam! Cupiditate necessitatibus, voluptatem excepturi placeat exercitationem quos vitae ut vero dolorem, provident sit odio porro facere.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- END section -->
-    <section class="section-cover cta" data-stellar-background-ratio="0.5" :style="{backgroundImage: 'url('+require('../assets/images/big_image_2.jpg')+')'}">
-      <div class="container">
-        <div class="row justify-content-center align-items-center intro">
-          <div class="col-md-8 text-center element-animate">
-            <h2 class="mb-4"><span>Appoint a Haircut Today and</span> Get 25% discount</h2>
-            <p><a href="#" class="btn btn-black">Make an Appointment</a></p>
           </div>
         </div>
       </div>

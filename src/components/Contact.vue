@@ -1,27 +1,16 @@
 <template>
   <div class="hello">
-<!--    <h1>{{ msg }}</h1>-->
     <section class="site-hero overlay" data-stellar-background-ratio="0.5" :style="{backgroundImage: 'url('+require('../assets/images/big_image_1.jpg')+')'}">
       <div class="container">
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
-
             <div class="mb-5 element-animate">
               <h1 class="mb-4">Contact Us</h1>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, quo!</p>
             </div>
-
           </div>
         </div>
       </div>
     </section>
-    <!-- END section -->
-
-
-
-
-
-
 
     <section class="quick-info element-animate" data-animate-effect="fadeInLeft">
       <div class="container">
@@ -60,26 +49,24 @@
         </div>
       </div>
     </section>
-    <!-- END section -->
-
 
     <section class="site-section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <form action="#" method="post">
+            <form action="http://barber.amusoft.uz/api/contacts" method="post">
               <div class="row">
                 <div class="col-md-4 form-group">
                   <label for="name">Name</label>
-                  <input type="text" id="name" class="form-control ">
+                  <input type="text" id="name" class="form-control" name="name">
                 </div>
                 <div class="col-md-4 form-group">
-                  <label for="phone">Phone</label>
-                  <input type="text" id="phone" class="form-control ">
+                  <label for="title">Title</label>
+                  <input type="text" id="title" class="form-control" name="title">
                 </div>
                 <div class="col-md-4 form-group">
                   <label for="email">Email</label>
-                  <input type="email" id="email" class="form-control ">
+                  <input type="email" id="email" class="form-control" name="email">
                 </div>
               </div>
 
@@ -99,25 +86,12 @@
         </div>
       </div>
     </section>
-    <!-- END section -->
-
-    <section class="section-cover cta" data-stellar-background-ratio="0.5" :style="{backgroundImage: 'url('+require('../assets/images/big_image_2.jpg')+')'}">
-      <div class="container">
-        <div class="row justify-content-center align-items-center intro">
-          <div class="col-md-8 text-center element-animate">
-            <h2 class="mb-4"><span>Appoint a Haircut Today and</span> Get 25% discount</h2>
-            <p><a href="#" class="btn btn-black">Make an Appointment</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Contact',
+  name: 'contact',
   data () {
     return {
       msg: 'Welcome to Contact page'

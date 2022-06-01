@@ -7,9 +7,7 @@
           <div class="col-md-8 text-center">
 
             <div class="mb-5 element-animate">
-              <!-- <img src="images/banner_text_1.png" alt="Image placeholder" class="img-md-fluid"> -->
               <h1 class="mb-4">Hair Styles</h1>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, quo!</p>
             </div>
 
           </div>
@@ -17,11 +15,6 @@
       </div>
     </section>
     <!-- END section -->
-
-
-
-
-
     <section class="quick-info element-animate" data-animate-effect="fadeInLeft">
       <div class="container">
         <div class="row">
@@ -165,18 +158,6 @@
               <h2>Crew Hair Cut</h2>
               <p>Learn More</p>
             </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-
-    <section class="section-cover cta" data-stellar-background-ratio="0.5" :style="{backgroundImage: 'url('+require('../assets/images/big_image_1.jpg')+')'}">
-      <div class="container">
-        <div class="row justify-content-center align-items-center intro">
-          <div class="col-md-8 text-center element-animate">
-            <h2 class="mb-4"><span>Appoint a Haircut Today and</span> Get 25% discount</h2>
-            <p><a href="#" class="btn btn-black">Make an Appointment</a></p>
           </div>
         </div>
       </div>

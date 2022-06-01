@@ -1112,8 +1112,9 @@ textarea.form-control {
 }
 
 .element-animate {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
 }
 
 #loader {
