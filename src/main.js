@@ -14,3 +14,5 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+//video card js
+

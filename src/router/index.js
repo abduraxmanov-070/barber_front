@@ -5,6 +5,7 @@ import About from "../components/About"
 import Contact from "../components/Contact"
 import HairStyle from "../components/HairStyle";
 import Booking from "../components/Booking";
+import Gallery from "../components/Gallery";
 //styles
 // import "../assets/css/style.css";
 // import "../assets/css/animate.css";
@@ -56,6 +57,11 @@ export default new Router({
       path: '/booking',
       name: 'booking',
       component: Booking
+    },
+    {
+      path: '/gallery',
+      name: 'gallery',
+      component: Gallery
     },
   ]
 })

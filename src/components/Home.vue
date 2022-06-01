@@ -1,8 +1,6 @@
 <template>
   <div class="hello">
-<!--    <h1>{{ msg }}</h1>-->
     <section class="site-hero overlay" data-stellar-background-ratio="0.5" :style="{backgroundImage: 'url('+require('../assets/images/big_image_1.jpg')+')'}">
-<!--             style="background-image: url('../assets/images/big_image_1.jpg');">-->
       <div class="container">
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
@@ -24,8 +22,8 @@
                 <div class="media">
                   <div class="mr-3 icon-wrap"><span class="icon ion-ios-telephone"></span></div>
                   <div class="media-body">
-                    <h5>+1 234 5633 342</h5>
-                    <p>Call us 24/7 we will get back to you ASAP</p>
+                    <h5>+998 00 000 00 00</h5>
+                    <p>Biz bilan bog'lanish : 7/24</p>
                   </div>
                 </div>
               </div>
@@ -33,8 +31,8 @@
                 <div class="media">
                   <div class="mr-3 icon-wrap"><span class="icon ion-location"></span></div>
                   <div class="media-body">
-                    <h5>249 Division Rad</h5>
-                    <p>Fake st. New York, New York City,  PO 2923 USA</p>
+                    <h5>101 uy</h5>
+                    <p>Al-Xorazmiy k, Urganch sh, Xorazm v, O'zbekiston</p>
                   </div>
                 </div>
               </div>
@@ -42,8 +40,8 @@
                 <div class="media">
                   <div class="mr-3 icon-wrap"><span class="icon ion-android-time"></span></div>
                   <div class="media-body">
-                    <h5>Daily: 8 am - 10 pm</h5>
-                    <p>Mon-Fri, Sunday <br> Saturday: Closed</p>
+                    <h5>Ish vaqti: 08:00 - 20:00 pm</h5>
+                    <p>Ish kunlari Dush-Shan <br> Dam olish : Yak</p>
                   </div>
                 </div>
               </div>
@@ -57,7 +55,7 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center">
-            <h2>Barber Features</h2>
+            <h2>Sartaroshlar xususiyati:</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum magnam illum maiores adipisci pariatur, eveniet.</p>
           </div>
         </div>
@@ -67,7 +65,7 @@
             <div class="media d-block media-feature text-center">
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-scissors-1"></span></div>
               <div class="media-body">
-                <h3>Shave &amp; Haircut</h3>
+                <h3>Yuvish &amp; Kesish</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem nulla odio iure animi repellat voluptates ullam omnis enim?</p>
               </div>
             </div>
@@ -77,7 +75,7 @@
             <div class="media d-block media-feature text-center">
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-cream"></span></div>
               <div class="media-body">
-                <h3>Cream &amp; Shampoo</h3>
+                <h3>Kirem &amp; Shampun</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem nulla odio iure animi repellat voluptates ullam omnis enim?</p>
               </div>
             </div>

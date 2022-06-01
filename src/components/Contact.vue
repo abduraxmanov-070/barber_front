@@ -5,7 +5,7 @@
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
             <div class="mb-5 element-animate">
-              <h1 class="mb-4">Contact Us</h1>
+              <h1 class="mb-4">Bog'lanish</h1>
             </div>
           </div>
         </div>
@@ -21,8 +21,8 @@
                 <div class="media">
                   <div class="mr-3 icon-wrap"><span class="icon ion-ios-telephone"></span></div>
                   <div class="media-body">
-                    <h5>+1 234 5633 342</h5>
-                    <p>Call us 24/7 we will get back to you ASAP</p>
+                    <h5>+998 00 000 00 00</h5>
+                    <p>Biz bilan bog'lanish : 7/24</p>
                   </div>
                 </div>
               </div>
@@ -30,8 +30,8 @@
                 <div class="media">
                   <div class="mr-3 icon-wrap"><span class="icon ion-location"></span></div>
                   <div class="media-body">
-                    <h5>249 Division Rad</h5>
-                    <p>Fake st. New York, New York City,  PO 2923 USA</p>
+                    <h5>101 uy</h5>
+                    <p>Al-Xorazmiy k, Urganch sh, Xorazm v, O'zbekiston</p>
                   </div>
                 </div>
               </div>
@@ -39,8 +39,8 @@
                 <div class="media">
                   <div class="mr-3 icon-wrap"><span class="icon ion-android-time"></span></div>
                   <div class="media-body">
-                    <h5>Daily: 8 am - 10 pm</h5>
-                    <p>Mon-Fri, Sunday <br> Saturday: Closed</p>
+                    <h5>Ish vaqti: 08:00 - 20:00 pm</h5>
+                    <p>Ish kunlari Dush-Shan <br> Dam olish : Yak</p>
                   </div>
                 </div>
               </div>
@@ -57,7 +57,7 @@
             <form action="http://barber.amusoft.uz/api/contacts" method="post">
               <div class="row">
                 <div class="col-md-4 form-group">
-                  <label for="name">Name</label>
+                  <label for="name">F.I.O</label>
                   <input type="text" id="name" class="form-control" name="name">
                 </div>
                 <div class="col-md-4 form-group">

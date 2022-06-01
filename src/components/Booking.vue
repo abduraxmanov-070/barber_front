@@ -7,7 +7,7 @@
           <div class="col-md-8 text-center">
 
             <div class="mb-5 element-animate">
-              <h1 class="mb-4">Booking</h1>
+              <h1 class="mb-4">Navbat</h1>
             </div>
           </div>
         </div>
@@ -22,8 +22,8 @@
                 <div class="media">
                   <div class="mr-3 icon-wrap"><span class="icon ion-ios-telephone"></span></div>
                   <div class="media-body">
-                    <h5>+1 234 5633 342</h5>
-                    <p>Call us 24/7 we will get back to you ASAP</p>
+                    <h5>+998 00 000 00 00</h5>
+                    <p>Biz bilan bog'lanish : 7/24</p>
                   </div>
                 </div>
               </div>
@@ -31,8 +31,8 @@
                 <div class="media">
                   <div class="mr-3 icon-wrap"><span class="icon ion-location"></span></div>
                   <div class="media-body">
-                    <h5>249 Division Rad</h5>
-                    <p>Fake st. New York, New York City,  PO 2923 USA</p>
+                    <h5>101 uy</h5>
+                    <p>Al-Xorazmiy k, Urganch sh, Xorazm v, O'zbekiston</p>
                   </div>
                 </div>
               </div>
@@ -40,8 +40,8 @@
                 <div class="media">
                   <div class="mr-3 icon-wrap"><span class="icon ion-android-time"></span></div>
                   <div class="media-body">
-                    <h5>Daily: 8 am - 10 pm</h5>
-                    <p>Mon-Fri, Sunday <br> Saturday: Closed</p>
+                    <h5>Ish vaqti: 08:00 - 20:00 pm</h5>
+                    <p>Ish kunlari Dush-Shan <br> Dam olish : Yak</p>
                   </div>
                 </div>
               </div>
@@ -77,17 +77,17 @@
             <form action="http://barber.amusoft.uz/api/bookings" method="post">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <label for="client_name">Client_name</label>
+                  <label for="client_name">Mijoz F.I.O</label>
                   <input type="text" id="client_name" class="form-control" name="client_name">
                 </div>
                 <div class="col-md-6 form-group">
-                  <label for="client_phone_number">Client_phone_nomber</label>
+                  <label for="client_phone_number">Mijoz tel_nomer:</label>
                   <input type="text" id="client_phone_number" class="form-control" name="client_phone_number">
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12 form-group">
-                  <label for="barber_id">Barber</label>
+                  <label for="barber_id">Sartaroshlar</label>
                   <select id="barber_id" name="barber_id" class="form-control">
                     <option v-for="item in barbers" v-bind:key="item.id" :value="item['id']">{{item['barber_name']}}</option>
                   </select>
@@ -95,21 +95,17 @@
               </div>
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <label for="day">Day</label>
+                  <label for="day">Kun Sana</label>
                   <input type="date" id="day" class="form-control" name="day">
                 </div>
                 <div class="col-md-6 form-group">
-                  <label for="start_time">Start_time</label>
+                  <label for="start_time">Band qilish vaqti:</label>
                   <input type="time" id="start_time" class="form-control" name="start_time">
                 </div>
-<!--                <div class="col-md-6 form-group">-->
-<!--                  <label for="end_time">End_time</label>-->
-<!--                  <input type="time" id="end_time" class="form-control" name="end_time">-->
-<!--                </div>-->
               </div>
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="submit" value="Send Message" class="btn btn-primary">
+                  <input type="submit" value="Xabarni yuborish" class="btn btn-primary">
                 </div>
               </div>
             </form>
