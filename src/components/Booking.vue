@@ -5,7 +5,6 @@
       <div class="container">
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
-
             <div class="mb-5 element-animate">
               <h1 class="mb-4">Booking</h1>
             </div>
@@ -74,21 +73,21 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <form action="http://barber.amusoft.uz/api/bookings" method="post">
+            <form action="http://barber.amusoft.uz/api/bookings" method="post" @submit.prevent="mxSubmit" id="form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <label for="client_name">Client_name</label>
-                  <input type="text" id="client_name" class="form-control" name="client_name">
+                  <input type="text" id="client_name" class="form-control" name="client_name" required v-model="client_name">
                 </div>
                 <div class="col-md-6 form-group">
                   <label for="client_phone_number">Client_phone_nomber</label>
-                  <input type="text" id="client_phone_number" class="form-control" name="client_phone_number">
+                  <input type="text" id="client_phone_number" class="form-control" name="client_phone_number" required v-model="client_phone_number">
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12 form-group">
                   <label for="barber_id">Barber</label>
-                  <select id="barber_id" name="barber_id" class="form-control">
+                  <select id="barber_id" name="barber_id" class="form-control" required v-model="barber_id">
                     <option v-for="item in barbers" v-bind:key="item.id" :value="item['id']">{{item['barber_name']}}</option>
                   </select>
                 </div>
@@ -96,16 +95,22 @@
               <div class="row">
                 <div class="col-md-6 form-group">
                   <label for="day">Day</label>
-                  <input type="date" id="day" class="form-control" name="day">
+                  <input type="date" id="day" class="form-control" name="day" required v-model="day">
                 </div>
                 <div class="col-md-6 form-group">
                   <label for="start_time">Start_time</label>
-                  <input type="time" id="start_time" class="form-control" name="start_time">
+                  <input type="time" id="start_time" class="form-control" name="start_time" required v-model="start_time">
                 </div>
 <!--                <div class="col-md-6 form-group">-->
 <!--                  <label for="end_time">End_time</label>-->
 <!--                  <input type="time" id="end_time" class="form-control" name="end_time">-->
 <!--                </div>-->
+              </div>
+              <div class="pb-2">
+                <vue-recaptcha
+                  sitekey="6Le9WAEVAAAAAO-U7wI50TYIP5nKAxb7VkbkyoSY"
+                  @verify = "mxVerify"
+                ></vue-recaptcha>
               </div>
               <div class="row">
                 <div class="col-md-6 form-group">
@@ -133,12 +138,36 @@
 import Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
-
-Vue.use(VueAxios, axios)
+import { VueRecaptcha } from 'vue-recaptcha';
+Vue.use(VueAxios, axios).use(VueRecaptcha);
 export default {
   name: 'booking',
+  components: { VueRecaptcha },
+  methods: {
+    mxSubmit(){
+      if (this.client_name && this.client_phone_number && this.day && this.barber_id && this.start_time && this.recaptcha)
+        $('#form').submit();
+      else this.form = false;
+    },
+    mxVerify( response ){
+      this.recaptcha = response;
+    },
+    onEvent(){
+      // when you need a reCAPTCHA challenge
+      this.$refs.recaptcha.execute();
+    }
+  },
   data() {
-    return {list: undefined , barbers: undefined}
+    return {
+      list: undefined , barbers: undefined,
+      form:false,
+      client_name:null,
+      client_phone_number:null,
+      day:null,
+      start_time:null,
+      barber_id:null,
+      recaptcha:null,
+    }
   },
   mounted() {
     Vue.axios.get('http://barber.amusoft.uz/api/bookings')
