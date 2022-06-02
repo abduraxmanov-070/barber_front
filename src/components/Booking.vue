@@ -31,7 +31,7 @@
                   <div class="mr-3 icon-wrap"><span class="icon ion-location"></span></div>
                   <div class="media-body">
                     <h5>249 Division Rad</h5>
-                    <p>Fake st. New York, New York City,  PO 2923 USA</p>
+                    <p>Fake st. New York, New York City, PO 2923 USA</p>
                   </div>
                 </div>
               </div>
@@ -50,24 +50,85 @@
       </div>
     </section>
     <!-- END section -->
-    <section class="site-section">
-      <div class="container">
+
+
+    <section class="page-contain">
+      <a href="" class="data-card text-center">
+        <h3 >02.06.2022</h3>
+        <h4>Customers</h4>
         <table border="1px" class="w-100">
           <tr>
-            <td>barber_name</td>
-            <td>client_name</td>
-            <td>day</td>
-            <td>start_time</td>
+            <td>Barber</td>
+            <td>Client</td>
+            <td>Time</td>
           </tr>
           <tr v-for="item in list" v-bind:key="item.id">
             <td>{{ item.barber.barber_name }}</td>
             <td>{{ item['client_name '] }}</td>
-            <td>{{ item['day '] }}</td>
             <td>{{ item['start_time  '] }}</td>
           </tr>
         </table>
-      </div>
+      </a>
+      <a href="" class="data-card text-center">
+        <h3>03.06.2022</h3>
+        <h4>Customers</h4>
+        <table border="1px" class="w-100">
+          <tr>
+            <td>Barber</td>
+            <td>Client</td>
+            <td>Time</td>
+          </tr>
+          <tr v-for="item in list" v-bind:key="item.id">
+            <td>{{ item.barber.barber_name }}</td>
+            <td>{{ item['client_name '] }}</td>
+            <td>{{ item['start_time  '] }}</td>
+          </tr>
+        </table>
+      </a>
+      <a href="" class="data-card text-center">
+        <h3>04.06.2022</h3>
+        <h4>Customers</h4>
+        <table border="1px" class="w-100">
+          <tr>
+            <td>Barber</td>
+            <td>Client</td>
+            <td>Time</td>
+          </tr>
+          <tr v-for="item in list" v-bind:key="item.id">
+            <td>{{ item.barber.barber_name }}</td>
+            <td>{{ item['client_name '] }}</td>
+            <td>{{ item['start_time  '] }}</td>
+          </tr>
+        </table>
+      </a>
     </section>
+
+
+<!--    <section class="site-section">-->
+<!--      <div class="container">-->
+<!--        <div class="card">-->
+<!--          <div class="card-header">-->
+<!--            Bugun-->
+<!--          </div>-->
+<!--          <div class="card-body">-->
+<!--            <table border="1px" class="w-100">-->
+<!--              <tr>-->
+<!--                <td>barber_name</td>-->
+<!--                <td>client_name</td>-->
+<!--                <td>day</td>-->
+<!--                <td>start_time</td>-->
+<!--              </tr>-->
+<!--              <tr v-for="item in list" v-bind:key="item.id">-->
+<!--                <td>{{ item.barber.barber_name }}</td>-->
+<!--                <td>{{ item['client_name '] }}</td>-->
+<!--                <td>{{ item['day '] }}</td>-->
+<!--                <td>{{ item['start_time  '] }}</td>-->
+<!--              </tr>-->
+<!--            </table>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
     <!--    booking form-->
     <section class="site-section">
       <div class="container">
@@ -77,18 +138,21 @@
               <div class="row">
                 <div class="col-md-6 form-group">
                   <label for="client_name">Client_name</label>
-                  <input type="text" id="client_name" class="form-control" name="client_name" required v-model="client_name">
+                  <input type="text" id="client_name" class="form-control" name="client_name" required
+                         v-model="client_name">
                 </div>
                 <div class="col-md-6 form-group">
                   <label for="client_phone_number">Client_phone_nomber</label>
-                  <input type="text" id="client_phone_number" class="form-control" name="client_phone_number" required v-model="client_phone_number">
+                  <input type="text" id="client_phone_number" class="form-control" name="client_phone_number" required
+                         v-model="client_phone_number">
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12 form-group">
                   <label for="barber_id">Barber</label>
                   <select id="barber_id" name="barber_id" class="form-control" required v-model="barber_id">
-                    <option v-for="item in barbers" v-bind:key="item.id" :value="item['id']">{{item['barber_name']}}</option>
+                    <option v-for="item in barbers" v-bind:key="item.id" :value="item['id']">{{ item['barber_name'] }}
+                    </option>
                   </select>
                 </div>
               </div>
@@ -99,17 +163,18 @@
                 </div>
                 <div class="col-md-6 form-group">
                   <label for="start_time">Start_time</label>
-                  <input type="time" id="start_time" class="form-control" name="start_time" required v-model="start_time">
+                  <input type="time" id="start_time" class="form-control" name="start_time" required
+                         v-model="start_time">
                 </div>
-<!--                <div class="col-md-6 form-group">-->
-<!--                  <label for="end_time">End_time</label>-->
-<!--                  <input type="time" id="end_time" class="form-control" name="end_time">-->
-<!--                </div>-->
+                <!--                <div class="col-md-6 form-group">-->
+                <!--                  <label for="end_time">End_time</label>-->
+                <!--                  <input type="time" id="end_time" class="form-control" name="end_time">-->
+                <!--                </div>-->
               </div>
               <div class="pb-2">
                 <vue-recaptcha
                   sitekey="6Le9WAEVAAAAAO-U7wI50TYIP5nKAxb7VkbkyoSY"
-                  @verify = "mxVerify"
+                  @verify="mxVerify"
                 ></vue-recaptcha>
               </div>
               <div class="row">
@@ -135,45 +200,90 @@
 //     }
 //   }
 // }
+// var today = new Date();
+// if (today.getMonth()+1 > 9 && today.getDate()>9)
+// var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+// if (today.getMonth()+1 < 10 && today.getDate()>9)
+//   var date = today.getFullYear()+'-0'+(today.getMonth()+1)+'-'+today.getDate();
+// if (today.getMonth()+1 > 9 && today.getDate()<10)
+//   var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-0'+today.getDate();
+// if (today.getMonth()+1 <= 9 && today.getDate()<=9)
+//   var date = today.getFullYear()+'-0'+(today.getMonth()+1)+'-0'+today.getDate();
+// alert(date);
+
 import Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
-import { VueRecaptcha } from 'vue-recaptcha';
+import {VueRecaptcha} from 'vue-recaptcha';
+
 Vue.use(VueAxios, axios).use(VueRecaptcha);
 export default {
   name: 'booking',
-  components: { VueRecaptcha },
+  components: {VueRecaptcha},
   methods: {
-    mxSubmit(){
+    mxSubmit() {
       if (this.client_name && this.client_phone_number && this.day && this.barber_id && this.start_time && this.recaptcha)
         $('#form').submit();
       else this.form = false;
     },
-    mxVerify( response ){
+    mxVerify(response) {
       this.recaptcha = response;
     },
-    onEvent(){
+    onEvent() {
       // when you need a reCAPTCHA challenge
       this.$refs.recaptcha.execute();
     }
   },
   data() {
+    // let booking_today = {};
+    // for (let item in list) {
+    //   booking_today.barber = item.barber.barber_name;
+    //   booking_today.client = item['client_name '];
+    //   booking_today.time = item['start_time  '];
+    // }
+    // console.log(booking_today);
     return {
-      list: undefined , barbers: undefined,
-      form:false,
-      client_name:null,
-      client_phone_number:null,
-      day:null,
-      start_time:null,
-      barber_id:null,
-      recaptcha:null,
+      list: undefined, barbers: undefined,
+      form: false,
+      client_name: null,
+      client_phone_number: null,
+      day: null,
+      start_time: null,
+      barber_id: null,
+      recaptcha: null,
     }
   },
   mounted() {
     Vue.axios.get('http://barber.amusoft.uz/api/bookings')
       .then((resp) => {
         this.list = resp.data;
-        console.warn(resp.data)
+        var today = new Date();
+        if (today.getMonth()+1 > 9 && today.getDate()>9)
+          var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        if (today.getMonth()+1 < 10 && today.getDate()>9)
+          var date = today.getFullYear()+'-0'+(today.getMonth()+1)+'-'+today.getDate();
+        if (today.getMonth()+1 > 9 && today.getDate()<10)
+          var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-0'+today.getDate();
+        if (today.getMonth()+1 <= 9 && today.getDate()<=9)
+          var date = today.getFullYear()+'-0'+(today.getMonth()+1)+'-0'+today.getDate();
+        // var booking_today = {};
+        // for (const item in booking_today) {
+        //   if(item['day '] == today) {
+        //     booking_today.barber = item.barber.barber_name;
+        //     booking_today.client = item['client_name '];
+        //     booking_today.time = item['start_time  '];
+        //   }
+        // }
+        var booking_today = resp.data.filter(function(elem){
+          if(elem['day '] == today) return elem;
+        });
+        // for (let item in resp.data) {
+        //   booking_today.barber = item.barber.barber_name;
+        //   booking_today.client = item['client_name '];
+        //   booking_today.time = item['start_time  '];
+        // }
+        console.log(booking_today);
+        console.warn(resp.data);
       })
     Vue.axios.get('http://barber.amusoft.uz/api/barbers')
       .then((resp) => {
@@ -187,6 +297,112 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+* {
+box-sizing: border-box;
+}
+.page-contain {
+display: flex;
+min-height: 100vh;
+align-items: center;
+justify-content: center;
+background: #e7f3f1;
+border: 0.75em solid white;
+padding: 2em;
+font-family: 'Open Sans', sans-serif;
+}
+.data-card {
+display: flex;
+flex-direction: column;
+max-width: 20.75em;
+min-height: 20.75em;
+overflow: hidden;
+border-radius: 0.5em;
+text-decoration: none;
+background: white;
+margin: 1em;
+padding: 2.75em 2.5em;
+box-shadow: 0 1.5em 2.5em -0.5em rgba(0, 0, 0, .1);
+transition: transform 0.45s ease, background 0.45s ease;
+}
+.data-card h3 {
+  color: #2e3c40;
+  font-size: 3em;
+  font-weight: 600;
+  line-height: 1;
+  padding-bottom: 0.5em;
+  margin: 0 0 0.142857143em;
+  border-bottom: 2px solid #753bbd;
+  transition: color 0.45s ease, border 0.45s ease;
+}
+.data-card h4 {
+  color: #627084;
+  text-transform: uppercase;
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  margin: 0 0 1.777777778em;
+  transition: color 0.45s ease;
+}
+.data-card p {
+  opacity: 0;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.8;
+  margin: 0 0 1.25em;
+  transform: translateY(-1em);
+  transition: opacity 0.45s ease, transform 0.5s ease;
+}
+.data-card .link-text {
+  display: block;
+  color: #753bbd;
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: auto 0 0;
+  transition: color 0.45s ease;
+}
+.data-card .link-text svg {
+  margin-left: 0.5em;
+  transition: transform 0.6s ease;
+}
+.data-card .link-text svg path {
+  transition: fill 0.45s ease;
+}
+.data-card:hover {
+  background: #753bbd;
+  transform: scale(1.02);
+}
+.data-card:hover h3 {
+  color: #fff;
+  border-bottom-color: #a754c4;
+}
+.data-card:hover h4 {
+  color: #fff;
+}
+.data-card:hover p {
+  opacity: 1;
+  transform: none;
+}
+.data-card:hover .link-text {
+  color: #fff;
+}
+.data-card:hover .link-text svg {
+  animation: point 1.25s infinite alternate;
+}
+.data-card:hover .link-text svg path {
+  fill: #fff;
+}
+@keyframes point {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0.125em);
+  }
+}
+
 h1, h2 {
   font-weight: normal;
 }
