@@ -53,8 +53,8 @@
 
 
     <section class="page-contain">
-      <a href="" class="data-card text-center">
-        <h3 >02.06.2022</h3>
+      <a href="" class="data-card text-center" v-if="today.length > 0">
+        <h3>{{ today[0]['day ']}} </h3>
         <h4>Mijozlar</h4>
         <table border="1px" class="w-100">
           <tr>
@@ -62,15 +62,15 @@
             <td>Mijoz</td>
             <td>Vaqti</td>
           </tr>
-          <tr v-for="item in list" v-bind:key="item.id">
+          <tr v-for="item in today" v-bind:key="item.id">
             <td>{{ item.barber.barber_name }}</td>
             <td>{{ item['client_name '] }}</td>
             <td>{{ item['start_time  '] }}</td>
           </tr>
         </table>
       </a>
-      <a href="" class="data-card text-center">
-        <h3>03.06.2022</h3>
+      <a href="" class="data-card text-center" v-if="tomorrow.length > 0">
+        <h3>{{ tomorrow[0]['day '] }}</h3>
         <h4>Mijozlar</h4>
         <table border="1px" class="w-100">
           <tr>
@@ -78,15 +78,15 @@
             <td>Mijoz</td>
             <td>Vaqt</td>
           </tr>
-          <tr v-for="item in list" v-bind:key="item.id">
+          <tr v-for="item in tomorrow" v-bind:key="item.id">
             <td>{{ item.barber.barber_name }}</td>
             <td>{{ item['client_name '] }}</td>
             <td>{{ item['start_time  '] }}</td>
           </tr>
         </table>
       </a>
-      <a href="" class="data-card text-center">
-        <h3>04.06.2022</h3>
+      <a href="" class="data-card text-center" v-if="after_tomorrow.length > 0">
+        <h3>{{ after_tomorrow[0]['day '] }}</h3>
         <h4>Mijozlar</h4>
         <table border="1px" class="w-100">
           <tr>
@@ -94,7 +94,7 @@
             <td>Mijoz</td>
             <td>Vaqt</td>
           </tr>
-          <tr v-for="item in list" v-bind:key="item.id">
+          <tr v-for="item in after_tomorrow" v-bind:key="item.id">
             <td>{{ item.barber.barber_name }}</td>
             <td>{{ item['client_name '] }}</td>
             <td>{{ item['start_time  '] }}</td>
@@ -103,32 +103,6 @@
       </a>
     </section>
 
-
-<!--    <section class="site-section">-->
-<!--      <div class="container">-->
-<!--        <div class="card">-->
-<!--          <div class="card-header">-->
-<!--            Bugun-->
-<!--          </div>-->
-<!--          <div class="card-body">-->
-<!--            <table border="1px" class="w-100">-->
-<!--              <tr>-->
-<!--                <td>barber_name</td>-->
-<!--                <td>client_name</td>-->
-<!--                <td>day</td>-->
-<!--                <td>start_time</td>-->
-<!--              </tr>-->
-<!--              <tr v-for="item in list" v-bind:key="item.id">-->
-<!--                <td>{{ item.barber.barber_name }}</td>-->
-<!--                <td>{{ item['client_name '] }}</td>-->
-<!--                <td>{{ item['day '] }}</td>-->
-<!--                <td>{{ item['start_time  '] }}</td>-->
-<!--              </tr>-->
-<!--            </table>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
     <!--    booking form-->
     <section class="site-section">
       <div class="container">
@@ -159,7 +133,7 @@
               <div class="row">
                 <div class="col-md-6 form-group">
                   <label for="day">Sana</label>
-                  <input type="date" id="day" class="form-control" name="day" required v-model="day">
+                  <input type="date" id="day" class="form-control" name="day" :min="new Date()" required v-model="day">
                 </div>
                 <div class="col-md-6 form-group">
                   <label for="start_time">Bandlik vaqti</label>
@@ -188,24 +162,6 @@
 </template>
 
 <script>
-// export default {
-//   name: 'booking',
-//   data () {
-//     return {
-//       msg: 'Welcome to Booking page'
-//     }
-//   }
-// }
-// var today = new Date();
-// if (today.getMonth()+1 > 9 && today.getDate()>9)
-// var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-// if (today.getMonth()+1 < 10 && today.getDate()>9)
-//   var date = today.getFullYear()+'-0'+(today.getMonth()+1)+'-'+today.getDate();
-// if (today.getMonth()+1 > 9 && today.getDate()<10)
-//   var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-0'+today.getDate();
-// if (today.getMonth()+1 <= 9 && today.getDate()<=9)
-//   var date = today.getFullYear()+'-0'+(today.getMonth()+1)+'-0'+today.getDate();
-// alert(date);
 
 import Vue from 'vue';
 import axios from 'axios';
@@ -218,7 +174,7 @@ export default {
   components: {VueRecaptcha},
   methods: {
     mxSubmit() {
-      if (this.client_name && this.client_phone_number && this.day && this.barber_id && this.start_time && this.recaptcha)
+     if (this.client_name && this.client_phone_number && this.day && this.barber_id && this.start_time && this.recaptcha)
         $('#form').submit();
       else this.form = false;
     },
@@ -226,20 +182,12 @@ export default {
       this.recaptcha = response;
     },
     onEvent() {
-      // when you need a reCAPTCHA challenge
       this.$refs.recaptcha.execute();
     }
   },
   data() {
-    // let booking_today = {};
-    // for (let item in list) {
-    //   booking_today.barber = item.barber.barber_name;
-    //   booking_today.client = item['client_name '];
-    //   booking_today.time = item['start_time  '];
-    // }
-    // console.log(booking_today);
     return {
-      list: undefined, barbers: undefined,
+      list: undefined, barbers: undefined, today:undefined, tomorrow:undefined, after_tomorrow:undefined,
       form: false,
       client_name: null,
       client_phone_number: null,
@@ -253,37 +201,26 @@ export default {
     Vue.axios.get('http://barber.amusoft.uz/api/bookings')
       .then((resp) => {
         this.list = resp.data;
-        var today = new Date();
-        if (today.getMonth()+1 > 9 && today.getDate()>9)
-          var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-        if (today.getMonth()+1 < 10 && today.getDate()>9)
-          var date = today.getFullYear()+'-0'+(today.getMonth()+1)+'-'+today.getDate();
-        if (today.getMonth()+1 > 9 && today.getDate()<10)
-          var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-0'+today.getDate();
-        if (today.getMonth()+1 <= 9 && today.getDate()<=9)
-          var date = today.getFullYear()+'-0'+(today.getMonth()+1)+'-0'+today.getDate();
-        // var booking_today = {};
-        // for (const item in booking_today) {
-        //   if(item['day '] == today) {
-        //     booking_today.barber = item.barber.barber_name;
-        //     booking_today.client = item['client_name '];
-        //     booking_today.time = item['start_time  '];
-        //   }
-        // }
-        var booking_today = resp.data.specs.filter(function(elem){
-          if(elem['day '] == today) return elem.barber.barber_name;
-        });
-        // for (let item in resp.data) {
-        //   booking_today.barber = item.barber.barber_name;
-        //   booking_today.client = item['client_name '];
-        //   booking_today.time = item['start_time  '];
-        // }
-        console.warn(booking_today);
         console.warn(resp.data);
       })
     Vue.axios.get('http://barber.amusoft.uz/api/barbers')
       .then((resp) => {
         this.barbers = resp.data;
+        console.warn(resp.data)
+      })
+    Vue.axios.get('http://barber.amusoft.uz/api/today')
+      .then((resp) => {
+        this.today = resp.data;
+        console.warn(resp.data)
+      })
+    Vue.axios.get('http://barber.amusoft.uz/api/tomorrow')
+      .then((resp) => {
+        this.tomorrow = resp.data;
+        console.warn(resp.data)
+      })
+    Vue.axios.get('http://barber.amusoft.uz/api/after_tomorrow')
+      .then((resp) => {
+        this.after_tomorrow = resp.data;
         console.warn(resp.data)
       })
   }

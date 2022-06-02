@@ -60,6 +60,7 @@
               <div class="card__overlay">
                 <div class="card__header">
                   <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+<!--                  <img :src="require(`http://barber.amusoft.uz/photo/${item.url}`)" alt class="icon" />-->
 <!--                  <img class="card__thumb" src="http://barber.amusoft.uz/photo/" alt="" />-->
                   <div class="card__header-text">
                     <h3 class="card__title">{{ item.name}}</h3>
@@ -80,7 +81,9 @@
             <div class="card" >
               <div class="card-image">
                 <div class="embed-responsive embed-responsive-16by9">
+<!--                  <p>{{ item['url']}} </p>-->
                   <iframe width="280" height="157" :src="item['url']" frameborder="0" allowfullscreen></iframe>
+<!--                  <iframe width="560" height="315" src="https://www.youtube.com/embed/2sP75ZDb0RM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
                   <div class="content">
                     <h1>{{ item['name ']}}</h1>
                   </div>
