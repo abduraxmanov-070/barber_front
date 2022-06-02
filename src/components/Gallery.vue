@@ -56,12 +56,12 @@
         <ul class="cards">
           <li v-for="item in photos" v-bind:key="item.id">
             <a href="" class="card">
-              <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
+              <img :src="'http://barber.amusoft.uz/photo/'+ item.url" class="card__image" alt="" style="width: 500px; height: 650px" />
               <div class="card__overlay">
                 <div class="card__header">
                   <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
 <!--                  <img :src="require(`http://barber.amusoft.uz/photo/${item.url}`)" alt class="icon" />-->
-<!--                  <img class="card__thumb" src="http://barber.amusoft.uz/photo/" alt="" />-->
+                  <img class="card__thumb" :src="'http://barber.amusoft.uz/photo/'+ item.url" alt="" />
                   <div class="card__header-text">
                     <h3 class="card__title">{{ item.name}}</h3>
                   </div>
