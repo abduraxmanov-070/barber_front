@@ -270,15 +270,15 @@ export default {
         //     booking_today.time = item['start_time  '];
         //   }
         // }
-        var booking_today = resp.data.filter(function(elem){
-          if(elem['day '] == today) return elem;
+        var booking_today = resp.data.specs.filter(function(elem){
+          if(elem['day '] == today) return elem.barber.barber_name;
         });
         // for (let item in resp.data) {
         //   booking_today.barber = item.barber.barber_name;
         //   booking_today.client = item['client_name '];
         //   booking_today.time = item['start_time  '];
         // }
-        console.log(booking_today);
+        console.warn(booking_today);
         console.warn(resp.data);
       })
     Vue.axios.get('http://barber.amusoft.uz/api/barbers')
