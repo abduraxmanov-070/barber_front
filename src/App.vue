@@ -50,7 +50,7 @@
             </ul>
           </div>
           <div class="col-md-2">
-            <h3 class="mb-4">Links</h3>
+            <h3 class="mb-4">Bog'lanishlar</h3>
             <ul class="list-unstyled ">
               <li><a href="/">Bosh sahifa</a></li>
               <li><a href="/hairstyle">Soch kesish</a></li>
@@ -61,7 +61,7 @@
             </ul>
           </div>
           <div class="col-md-3">
-            <h3 class="mb-4">Latest Blog</h3>
+            <h3 class="mb-4">Eng so'nggi blog</h3>
             <ul class="list-unstyled blog-entry-footer">
               <li><a href="#">
                 <span class="post-meta">March 20, 2018</span>

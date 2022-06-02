@@ -61,7 +61,7 @@
                   <input type="text" id="name" class="form-control" name="name">
                 </div>
                 <div class="col-md-4 form-group">
-                  <label for="title">Title</label>
+                  <label for="title">Mavzu</label>
                   <input type="text" id="title" class="form-control" name="title">
                 </div>
                 <div class="col-md-4 form-group">
@@ -72,13 +72,13 @@
 
               <div class="row">
                 <div class="col-md-12 form-group">
-                  <label for="message">Write Message</label>
+                  <label for="message">Xabar yozish</label>
                   <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="submit" value="Send Message" class="btn btn-primary">
+                  <input type="submit" value="Saqlash" class="btn btn-primary">
                 </div>
               </div>
             </form>
