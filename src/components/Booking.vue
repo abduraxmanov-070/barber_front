@@ -56,11 +56,11 @@
       <a href="" class="data-card text-center" v-if="today.length > 0">
         <h3>{{ today[0]['day ']}} </h3>
         <h4>Mijozlar</h4>
-        <table border="1px" class="w-100">
-          <tr>
-            <td>Sartarosh</td>
-            <td>Mijoz</td>
-            <td>Vaqti</td>
+        <table border="1px" class="w-100 table-bordered text-black">
+          <tr class="bg-info">
+            <th>Sartarosh</th>
+            <th>Mijoz</th>
+            <th>Vaqti</th>
           </tr>
           <tr v-for="item in today" v-bind:key="item.id">
             <td>{{ item.barber.barber_name }}</td>
@@ -72,8 +72,8 @@
       <a href="" class="data-card text-center" v-if="tomorrow.length > 0">
         <h3>{{ tomorrow[0]['day '] }}</h3>
         <h4>Mijozlar</h4>
-        <table border="1px" class="w-100">
-          <tr>
+        <table border="1px" class="w-100 table-bordered text-black">
+          <tr class="bg-info">
             <td>Sartarosh</td>
             <td>Mijoz</td>
             <td>Vaqt</td>
@@ -88,8 +88,8 @@
       <a href="" class="data-card text-center" v-if="after_tomorrow.length > 0">
         <h3>{{ after_tomorrow[0]['day '] }}</h3>
         <h4>Mijozlar</h4>
-        <table border="1px" class="w-100">
-          <tr>
+        <table border="1px" class="w-100 table-bordered text-black">
+          <tr class="bg-info">
             <td>Sartarosh</td>
             <td>Mijoz</td>
             <td>Vaqt</td>
@@ -133,12 +133,11 @@
               <div class="row">
                 <div class="col-md-6 form-group">
                   <label for="day">Sana</label>
-                  <input type="date" id="day" class="form-control" name="day" :min="new Date()" required v-model="day">
+                  <input type="date" id="day" class="form-control" min="2022-06-02" name="day" required v-model="day">
                 </div>
                 <div class="col-md-6 form-group">
-                  <label for="start_time">Bandlik vaqti</label>
-                  <input type="time" id="start_time" class="form-control" name="start_time" required
-                         v-model="start_time">
+                  <label for="start_time">Kelish vaqti</label>
+                  <input type="time" id="start_time" class="form-control" name="start_time" required v-model="start_time">
                 </div>
               </div>
               <div class="pb-2">
@@ -149,7 +148,7 @@
               </div>
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="submit" value="Saqlash:" class="btn btn-primary">
+                  <input type="submit" value="Saqlash:" class="btn btn-primary" id="save">
                 </div>
               </div>
             </form>
@@ -162,7 +161,6 @@
 </template>
 
 <script>
-
 import Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
@@ -174,6 +172,7 @@ export default {
   components: {VueRecaptcha},
   methods: {
     mxSubmit() {
+
      if (this.client_name && this.client_phone_number && this.day && this.barber_id && this.start_time && this.recaptcha)
         $('#form').submit();
       else this.form = false;
@@ -201,34 +200,28 @@ export default {
     Vue.axios.get('http://barber.amusoft.uz/api/bookings')
       .then((resp) => {
         this.list = resp.data;
-        console.warn(resp.data);
       })
     Vue.axios.get('http://barber.amusoft.uz/api/barbers')
       .then((resp) => {
         this.barbers = resp.data;
-        console.warn(resp.data)
       })
     Vue.axios.get('http://barber.amusoft.uz/api/today')
       .then((resp) => {
         this.today = resp.data;
-        console.warn(resp.data)
       })
     Vue.axios.get('http://barber.amusoft.uz/api/tomorrow')
       .then((resp) => {
         this.tomorrow = resp.data;
-        console.warn(resp.data)
       })
     Vue.axios.get('http://barber.amusoft.uz/api/after_tomorrow')
       .then((resp) => {
         this.after_tomorrow = resp.data;
-        console.warn(resp.data)
       })
   }
 
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
 * {

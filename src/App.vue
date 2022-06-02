@@ -14,7 +14,7 @@
                 <router-link class="nav-link active" to="/">Bosh sahifa</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link active" to="/hairstyle">Soch kesish</router-link>
+                <router-link class="nav-link active" to="/hairstyle">Xizmatlar</router-link>
               </li>
               <li class="nav-item">
                 <router-link class="nav-link active" to="/about">Biz haqimizda</router-link>
@@ -23,7 +23,7 @@
                 <router-link class="nav-link active" to="/gallery">Galareya</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link active" to="/booking">Navbat</router-link>
+                <router-link class="nav-link active" to="/sertificate">Sertifikatlar</router-link>
               </li>
               <li class="nav-item">
                 <router-link class="nav-link active" to="/contact">Bog'lanish</router-link>
@@ -52,12 +52,12 @@
           <div class="col-md-2">
             <h3 class="mb-4">Bog'lanishlar</h3>
             <ul class="list-unstyled ">
-              <li><a href="/">Bosh sahifa</a></li>
-              <li><a href="/hairstyle">Soch kesish</a></li>
-              <li><a href="/about">Biz haqimizda</a></li>
-              <li><a href="/gallery">Galareya</a></li>
-              <li><a href="/booking">Navbat</a></li>
-              <li><a href="/contact">Bog'lanish</a></li>
+              <li><router-link to="/">Bosh sahifa</router-link></li>
+              <li><router-link to="/hairstyle">Xizmatlar</router-link></li>
+              <li><router-link to="/about">Biz haqimizda</router-link></li>
+              <li><router-link to="/gallery">Galareya</router-link></li>
+              <li><router-link to="/sertificate">Sertifikatlar</router-link></li>
+              <li><router-link to="/contact">Bog'lanish</router-link></li>
             </ul>
           </div>
           <div class="col-md-3">

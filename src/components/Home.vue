@@ -75,7 +75,7 @@
             <div class="media d-block media-feature text-center">
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-cream"></span></div>
               <div class="media-body">
-                <h3>Kirem &amp; Shampun</h3>
+                <h3>Krem &amp; Shampun</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem nulla odio iure animi repellat voluptates ullam omnis enim?</p>
               </div>
             </div>
@@ -125,22 +125,111 @@
       </div>
     </section>
     <!-- END section -->
+    <section class="page-contain">
+      <div class="data-card text-center" v-if="today.length > 0">
+        <h3>{{ today[0]['day ']}} </h3>
+        <h4>Mijozlar</h4>
+        <table border="1px" class="w-100 table-bordered text-black table-hover">
+          <tr class="bg-primary" >
+            <th>Sartarosh</th>
+            <th>Mijoz</th>
+            <th>Vaqti</th>
+          </tr>
+          <tr v-for="item in today" v-bind:key="item.id">
+            <td>{{ item.barber.barber_name }}</td>
+            <td>{{ item['client_name '] }}</td>
+            <td>{{ item['start_time  '] }}</td>
+          </tr>
+        </table>
+      </div>
+      <a href="" class="data-card text-center" v-if="tomorrow.length > 0">
+        <h3>{{ tomorrow[0]['day '] }}</h3>
+        <h4>Mijozlar</h4>
+        <table border="1px" class="w-100 table-bordered text-black">
+          <tr class="bg-primary">
+            <td>Sartarosh</td>
+            <td>Mijoz</td>
+            <td>Vaqt</td>
+          </tr>
+          <tr v-for="item in tomorrow" v-bind:key="item.id">
+            <td>{{ item.barber.barber_name }}</td>
+            <td>{{ item['client_name '] }}</td>
+            <td>{{ item['start_time  '] }}</td>
+          </tr>
+        </table>
+      </a>
+      <a href="" class="data-card text-center" v-if="after_tomorrow.length > 0">
+        <h3>{{ after_tomorrow[0]['day '] }}</h3>
+        <h4>Mijozlar</h4>
+        <table border="1px" class="w-100 table-bordered text-black">
+          <tr class="bg-primary">
+            <td>Sartarosh</td>
+            <td>Mijoz</td>
+            <td>Vaqt</td>
+          </tr>
+          <tr v-for="item in after_tomorrow" v-bind:key="item.id">
+            <td>{{ item.barber.barber_name }}</td>
+            <td>{{ item['client_name '] }}</td>
+            <td>{{ item['start_time  '] }}</td>
+          </tr>
+        </table>
+      </a>
+    </section>
+
+    <!--    booking form-->
     <section class="site-section">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 video-wrap mb-5">
-            <img src="../assets/images/img_5.jpg" alt="Image placeholder" class="img-fluid">
-            <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo btn-video"><span class="fa fa-play"></span></a>
-          </div>
-          <div class="col-md-6 pl-md-5">
-            <h3>Yaxshi ko'rinish uslubi</h3>
-            <p class="lead">Bugun bizdan boshlang</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facere a excepturi quod impedit rerum ipsum totam incidunt, necessitatibus id veritatis maiores quos saepe dolore commodi magnam fugiat. Incidunt, omnis.</p>
-            <p>Nobis quae eaque facere architecto eligendi, voluptas quasi, blanditiis aperiam possimus inventore quis nam! Cupiditate necessitatibus, voluptatem excepturi placeat exercitationem quos vitae ut vero dolorem, provident sit odio porro facere.</p>
+          <div class="col-md-12">
+            <form action="http://barber.amusoft.uz/api/bookings" method="post" @submit.prevent="mxSubmit" id="form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="client_name">Mijoz_F.I.O</label>
+                  <input type="text" id="client_name" class="form-control" name="client_name" required
+                         v-model="client_name">
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="client_phone_number">Mijoz tel_nomer</label>
+                  <input type="text" id="client_phone_number" class="form-control" name="client_phone_number" required
+                         v-model="client_phone_number">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label for="barber_id">Sartarosh</label>
+                  <select id="barber_id" name="barber_id" class="form-control" required v-model="barber_id">
+                    <option v-for="item in barbers" v-bind:key="item.id" :value="item['id']">{{ item['barber_name'] }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="day">Sana</label>
+                  <input type="date" id="day" class="form-control" min="2022-06-02" name="day" required v-model="day">
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="start_time">Bandlik vaqti</label>
+                  <input type="time" id="start_time" class="form-control" name="start_time" required v-model="start_time">
+                </div>
+              </div>
+              <div class="pb-2">
+                <vue-recaptcha
+                  sitekey="6Le9WAEVAAAAAO-U7wI50TYIP5nKAxb7VkbkyoSY"
+                  @verify="mxVerify"
+                ></vue-recaptcha>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="submit" value="Saqlash:" class="btn btn-primary" id="save">
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </section>
+    <!-- END section -->
 
     <!-- END section -->
 <!--<table border="1px">-->
@@ -164,36 +253,202 @@
 import Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
-Vue.use(VueAxios, axios)
+import {VueRecaptcha} from 'vue-recaptcha';
+
+Vue.use(VueAxios, axios).use(VueRecaptcha);
 export default {
-  name: 'home',
-  data () {
-    return {list:undefined }
+  name: 'booking',
+  components: {VueRecaptcha},
+  methods: {
+    mxSubmit() {
+
+      if (this.client_name && this.client_phone_number && this.day && this.barber_id && this.start_time && this.recaptcha)
+        $('#form').submit();
+      else this.form = false;
+    },
+    mxVerify(response) {
+      this.recaptcha = response;
+    },
+    onEvent() {
+      this.$refs.recaptcha.execute();
+    }
+  },
+  data() {
+    return {
+      list: undefined, barbers: undefined, today:undefined, tomorrow:undefined, after_tomorrow:undefined,
+      form: false,
+      client_name: null,
+      client_phone_number: null,
+      day: null,
+      start_time: null,
+      barber_id: null,
+      recaptcha: null,
+    }
   },
   mounted() {
-    Vue.axios.get('http://barber.amusoft.uz/api/serveces')
-    .then((resp)=>{
-      this.list=resp.data;
-      console.warn(resp.data)
-    })
+    Vue.axios.get('http://barber.amusoft.uz/api/bookings')
+      .then((resp) => {
+        this.list = resp.data;
+      })
+    Vue.axios.get('http://barber.amusoft.uz/api/barbers')
+      .then((resp) => {
+        this.barbers = resp.data;
+      })
+    Vue.axios.get('http://barber.amusoft.uz/api/today')
+      .then((resp) => {
+        this.today = resp.data;
+      })
+    Vue.axios.get('http://barber.amusoft.uz/api/tomorrow')
+      .then((resp) => {
+        this.tomorrow = resp.data;
+      })
+    Vue.axios.get('http://barber.amusoft.uz/api/after_tomorrow')
+      .then((resp) => {
+        this.after_tomorrow = resp.data;
+      })
   }
 
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+/*h1, h2 {*/
+/*  font-weight: normal;*/
+/*}*/
+/*ul {*/
+/*  list-style-type: none;*/
+/*  padding: 0;*/
+/*}*/
+/*li {*/
+/*  display: inline-block;*/
+/*  margin: 0 10px;*/
+/*}*/
+/*a {*/
+/*  color: #42b983;*/
+/*}*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+tr:hover{
+  background: darkgray;
+}
+.page-contain {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: sandybrown;
+  border: 0.75em solid white;
+  padding: 2em;
+  font-family: 'Open Sans', sans-serif;
+}
+.data-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 20.75em;
+  min-height: 20.75em;
+  overflow: hidden;
+  border-radius: 0.5em;
+  text-decoration: none;
+  background: white;
+  margin: 1em;
+  padding: 2.75em 2.5em;
+  box-shadow: 0 1.5em 2.5em -0.5em rgba(0, 0, 0, .1);
+  transition: transform 0.45s ease, background 0.45s ease;
+}
+.data-card h3 {
+  color: #2e3c40;
+  font-size: 3em;
+  font-weight: 600;
+  line-height: 1;
+  padding-bottom: 0.5em;
+  margin: 0 0 0.142857143em;
+  border-bottom: 2px solid #753bbd;
+  transition: color 0.45s ease, border 0.45s ease;
+}
+.data-card h4 {
+  color: #627084;
+  text-transform: uppercase;
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  margin: 0 0 1.777777778em;
+  transition: color 0.45s ease;
+}
+.data-card p {
+  opacity: 0;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.8;
+  margin: 0 0 1.25em;
+  transform: translateY(-1em);
+  transition: opacity 0.45s ease, transform 0.5s ease;
+}
+.data-card .link-text {
+  display: block;
+  color: #753bbd;
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: auto 0 0;
+  transition: color 0.45s ease;
+}
+.data-card .link-text svg {
+  margin-left: 0.5em;
+  transition: transform 0.6s ease;
+}
+.data-card .link-text svg path {
+  transition: fill 0.45s ease;
+}
+/*.data-card:hover {*/
+/*  !*background: #753bbd;*!*/
+/*  transform: scale(1.02);*/
+/*}*/
+/*.data-card:hover h3 {*/
+/*  color: #fff;*/
+/*  border-bottom-color: #a754c4;*/
+/*}*/
+/*.data-card:hover h4 {*/
+/*  color: #fff;*/
+/*}*/
+/*.data-card:hover p {*/
+/*  opacity: 1;*/
+/*  transform: none;*/
+/*}*/
+/*.data-card:hover .link-text {*/
+/*  color: #fff;*/
+/*}*/
+.data-card:hover .link-text svg {
+  animation: point 1.25s infinite alternate;
+}
+.data-card:hover .link-text svg path {
+  fill: #fff;
+}
+@keyframes point {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0.125em);
+  }
+}
+
 h1, h2 {
   font-weight: normal;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }

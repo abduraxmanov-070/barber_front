@@ -1,18 +1,18 @@
 <template>
   <div class="hello">
-    <section class="site-hero overlay" data-stellar-background-ratio="0.5":style="{backgroundImage: 'url('+require('../assets/images/big_image_1.jpg')+')'}">
+    <section class="site-hero overlay" data-stellar-background-ratio="0.5"
+             :style="{backgroundImage: 'url('+require('../assets/images/big_image_1.jpg')+')'}">
       <div class="container">
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
 
             <div class="mb-5 element-animate">
-              <h1 class="mb-4">Biz haqimizda</h1>
+              <h1 class="mb-4">Sertifikatlar</h1>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- END section -->
     <section class="quick-info element-animate" data-animate-effect="fadeInLeft">
       <div class="container">
         <div class="row">
@@ -50,76 +50,58 @@
         </div>
       </div>
     </section>
-    <!-- END section -->
-
-    <section class="site-section pb-5">
+    <!--    //cards styles-->
+    <section >
       <div class="container">
-        <div class="row mb-5 justify-content-center">
-<!--          <div class="col-md-8 text-center">-->
-<!--            <h1>Team</h1>-->
-<!--            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quia tempore magni dolore dolorum reprehenderit illum consectetur minima</p>-->
-<!--          </div>-->
-        </div>
-          <div class="row" v-for="item in barbers" v-bind:key="item.id">
-            <div class="col-md-6 video-wrap mb-5">
-              <img :src="'http://barber.amusoft.uz/photo/'+ item['barber_photo']"  alt="Image placeholder" class="img-fluid">
-            </div>
-          <div class="col-md-6 pl-md-5">
-            <h3>{{item['barber_name']}}</h3>
-            <p class="lead">Expert Barber</p>
-            <h3>Tel_nomer: {{item['barber_phone_number']}}</h3>
-            <h3>Manzili: {{item['barber_home_adress']}}</h3>
-            <h3>Ish vaqti: {{item['start_time']}} - {{item['end_time']}}</h3>
-          </div>
-        </div>
+        <ul class="cards">
+          <li v-for="item in photos" v-bind:key="item.id">
+            <a href="" class="card">
+              <img :src="'http://barber.amusoft.uz/sertifikat/'+ item.url" class="card__image" alt="" style="width: 400px; height: 300px " />
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
-    <!-- END section -->
   </div>
 </template>
 
 <script>
-// export default {
-//   name: 'about',
-//   data () {
-//     return {
-//       msg: 'Welcome to About page'
-//     }
-//   }
-// }
+
 import Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 
 Vue.use(VueAxios, axios)
 export default {
-  name: 'about',
+  name: 'sertificate',
   data() {
-    return {barbers: undefined }
+    return {photos: undefined , videos: undefined}
   },
   mounted() {
-    Vue.axios.get('http://barber.amusoft.uz/api/barbers')
+    Vue.axios.get('http://barber.amusoft.uz/api/certificates')
       .then((resp) => {
-        this.barbers = resp.data;
+        this.photos = resp.data;
         console.warn(resp.data)
       })
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
   font-weight: normal;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }

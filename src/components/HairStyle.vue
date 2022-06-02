@@ -1,15 +1,12 @@
 <template>
   <div class="hello">
-    <!--    <h1>{{ msg }}</h1>-->
     <section class="site-hero overlay" data-stellar-background-ratio="0.5" :style="{backgroundImage: 'url('+require('../assets/images/big_image_1.jpg')+')'}">
       <div class="container">
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
-
             <div class="mb-5 element-animate">
-              <h1 class="mb-4">Soch kesish</h1>
+              <h1 class="mb-4 " >Xizmatlar</h1>
             </div>
-
           </div>
         </div>
       </div>
@@ -52,130 +49,122 @@
         </div>
       </div>
     </section>
-    <!-- END section -->
-
-
-    <section class="site-section pb-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 video-wrap mb-5">
-            <img src="../assets/images/img_5.jpg" alt="Image placeholder" class="img-fluid">
-          </div>
-          <div class="col-md-6 pl-md-5">
-            <h3>Crew Cut</h3>
-            <p class="lead">Expert Barber</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facere a excepturi quod impedit rerum ipsum totam incidunt, necessitatibus id veritatis maiores quos saepe dolore commodi magnam fugiat. Incidunt, omnis.</p>
-            <p>Nobis quae eaque facere architecto eligendi, voluptas quasi, blanditiis aperiam possimus inventore quis nam! Cupiditate necessitatibus, voluptatem excepturi placeat exercitationem quos vitae ut vero dolorem, provident sit odio porro facere.</p>
-          </div>
+    <!--========Cards========-->
+    <div class="container-fluid main-cont">
+      <div class="row news-row">
+        <div class="container-fluid col-md-12 col-sm-6 justify-content-center news-block">
+          <div class="card-group">
+            <div class="underlay" v-for="item in services" v-bind:key="item.id">
+              <div class="card">
+<!--                <div class="card-img-top" :style="{backgroundImage: 'url('+require('http://barber.amusoft.uz/photo/'+item['photo'])+')'}"></div>-->
+<!--                http://barber.amusoft.uz/photo/1654175891.jpg-->
+                <img :src="'http://barber.amusoft.uz/photo/'+ item['photo']" class="card__image" alt="" style="width: 400px; height: 300px " />
+                <div class="card-block" >
+                  <h5 class="card-title" style="font-family: 'Anton', sans-serif">Canon Unveil<hr></h5>
+                </div>
+              </div>
+            </div>
+            </div>
         </div>
       </div>
-    </section>
-    <!-- END section -->
-
-    <section class="pt-5 pb-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 video-wrap mb-5">
-            <img src="../assets/images/img_3.jpg" alt="Image placeholder" class="img-fluid">
-          </div>
-          <div class="col-md-6 pl-md-5">
-            <h3>Regular Hair Cut</h3>
-            <p class="lead">Expert Barber</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facere a excepturi quod impedit rerum ipsum totam incidunt, necessitatibus id veritatis maiores quos saepe dolore commodi magnam fugiat. Incidunt, omnis.</p>
-            <p>Nobis quae eaque facere architecto eligendi, voluptas quasi, blanditiis aperiam possimus inventore quis nam! Cupiditate necessitatibus, voluptatem excepturi placeat exercitationem quos vitae ut vero dolorem, provident sit odio porro facere.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-
-    <section class="pt-5 pb-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 video-wrap mb-5">
-            <img src="../assets/images/img_2.jpg" alt="Image placeholder" class="img-fluid">
-          </div>
-          <div class="col-md-6 pl-md-5">
-            <h3>Hair Color</h3>
-            <p class="lead">Expert Barber</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facere a excepturi quod impedit rerum ipsum totam incidunt, necessitatibus id veritatis maiores quos saepe dolore commodi magnam fugiat. Incidunt, omnis.</p>
-            <p>Nobis quae eaque facere architecto eligendi, voluptas quasi, blanditiis aperiam possimus inventore quis nam! Cupiditate necessitatibus, voluptatem excepturi placeat exercitationem quos vitae ut vero dolorem, provident sit odio porro facere.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-
-
-
-    <section class="site-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center">
-            <h2>More Hair Styles</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum magnam illum maiores adipisci pariatur, eveniet.</p>
-          </div>
-        </div>
-        <div class="row top-destination">
-          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="../assets/images/img_1.jpg" alt="Image placeholder">
-              <h2>Beard Shaving</h2>
-              <p>Learn More</p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="../assets/images/img_2.jpg" alt="Image placeholder">
-              <h2>Crew Cut</h2>
-              <p>Learn More</p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="../assets/images/img_3.jpg" alt="Image placeholder">
-              <h2>Beard Trim</h2>
-              <p>Learn More</p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="../assets/images/img_4.jpg" alt="Image placeholder">
-              <h2>Shampoo + Hair Cut</h2>
-              <p>Learn More</p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="../assets/images/img_5.jpg" alt="Image placeholder">
-              <h2>Hair Color</h2>
-              <p>Learn More</p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="../assets/images/img_6.jpg" alt="Image placeholder">
-              <h2>Crew Hair Cut</h2>
-              <p>Learn More</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-
+    </div>
   </div>
 </template>
 
 <script>
+import Vue from 'vue';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+
+Vue.use(VueAxios, axios)
 export default {
   name: 'hairstyle',
-  data () {
-    return {
-      msg: 'Welcome to About page'
-    }
+  data() {
+    return {services: undefined , }
+  },
+  mounted() {
+    Vue.axios.get('http://barber.amusoft.uz/api/services')
+      .then((resp) => {
+        this.services = resp.data;
+      })
   }
 }
+var main = function () {
+  $('.push-bar').on('click', function(event){
+    if (!isClicked){
+      event.preventDefault();
+      $('.arrow').trigger('click');
+      isClicked = true;
+    }
+  });
+
+  $('.arrow').css({
+    'animation': 'bounce 2s infinite'
+  });
+  $('.arrow').on("mouseenter", function(){
+    $('.arrow').css({
+      'animation': '',
+      'transform': 'rotate(180deg)',
+      'background-color': 'black'
+    });
+  });
+  $('.arrow').on("mouseleave", function(){
+    if (!isClicked){
+      $('.arrow').css({
+        'transform': 'rotate(0deg)',
+        'background-color': 'black'
+      });
+    }
+  });
+
+  var isClicked = false;
+
+  $('.arrow').on("click", function(){
+    if (!isClicked){
+      isClicked = true;
+      $('.arrow').css({
+        'transform': 'rotate(180deg)',
+        'background-color': 'black',
+      });
+
+      $('.bar-cont').animate({
+        top: "-15px"
+      }, 300);
+      $('.main-cont').animate({
+        top: "0px"
+      }, 300);
+      // $('.news-block').css({'border': '0'});
+      // $('.underlay').slideDown(1000);
+
+    }
+    else if (isClicked){
+      isClicked = false;
+      $('.arrow').css({
+        'transform': 'rotate(0deg)',       'background-color': 'black'
+      });
+
+      $('.bar-cont').animate({
+        top: "-215px"
+      }, 300);
+      $('.main-cont').animate({
+        top: "-215px"
+      }, 300);
+    }
+    console.log('isClicked= '+isClicked);
+  });
+
+  $('.card').on('mouseenter', function() {
+    $(this).find('.card-text').slideDown(300);
+  });
+
+  $('.card').on('mouseleave', function(event) {
+    $(this).find('.card-text').css({
+      'display': 'none'
+    });
+  });
+};
+
+$(document).ready(main);
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -193,6 +182,412 @@ li {
 }
 a {
   color: #42b983;
+}
+*{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html{
+  overflow-y: scroll;
+}
+
+body{
+  background-color: transparent;
+  background: url('https://i.imgur.com/ApQKtQZ.jpeg') fixed no-repeat;
+  background-size: cover;
+  max-height: 300rem;
+  border: 15px solid transparent !important;
+  -o-border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
+  border-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(37.8%, rgb(245, 245, 245)),color-stop(48.8%, rgb(245, 245, 245)),color-stop(53.1%, rgb(254, 254, 254)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
+  border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
+  border-image-slice: 1 !important;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.95;
+}
+
+a:hover{
+  opacity: 1;
+  color: black;
+}
+/*----------------
+Push Bar
+------------------*/
+.bar-cont{
+  position: relative;
+  top: -215px;
+}
+
+.push-bar{
+  position: relative;
+  margin: auto;
+  width: 500px;
+  height: 200px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.creator{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.creator #codepen{
+  text-align: center;
+  font-size: 180px;
+  margin-top: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 8px 5px grey;
+  box-shadow: 0px 8px 5px grey;
+}
+
+
+.arrow{
+  margin: auto;
+  padding: 0;
+  margin-top: 50px;
+  margin-bottom: 0;
+  max-width: 80px;
+  height: 80px;
+  border: 3px solid black;
+  border-radius: 50%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 45%;
+  background-color: black;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-animation: blockAppear .6s ease-in-out;
+  animation: blockAppear .6s ease-in-out;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+/*-----------------
+Cards
+------------------*/
+.main-cont{
+  padding: 0;
+  margin: 0;
+  top: -215px;
+}
+
+.news-row {
+  margin: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.news-block{
+  margin: auto;
+  padding: 0;
+  background-color: transparent;
+  max-width: 1060px;
+  min-width: 100px;
+  border: 20px solid transparent;
+  -o-border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
+  border-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(37.8%, rgb(245, 245, 245)),color-stop(48.8%, rgb(245, 245, 245)),color-stop(53.1%, rgb(254, 254, 254)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
+  border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
+  border-image-slice: 1 !important;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-animation: blockAppear .6s ease-in-out;
+  animation: blockAppear .6s ease-in-out;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.underlay{
+  /*display: none;*/
+  margin: 0;
+  padding: 0;
+  max-height: 350px;
+  max-width: 340px;
+}
+
+.card{
+  margin: 0;
+  width: 340px;
+  max-height: 350px;
+  max-width: 340px;
+  background-color: transparent;
+  border: 20px solid transparent !important;
+  -o-border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
+  border-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
+  border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
+  border-image-slice: 1 !important;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  -webkit-animation: blockAppear .6s ease-in-out;
+  animation: blockAppear .6s ease-in-out;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes blockAppear {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px) ;
+    transform: translateY(20px) ;
+  }
+ready.css:1
+40% {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+  -webkit-box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
+  box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
+}
+ready.css:1
+80% {
+  opacity: 1;
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+ready.css:1
+100% {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+}
+
+@keyframes blockAppear {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px) ;
+    transform: translateY(20px) ;
+  }
+ready.css:1
+40% {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+  -webkit-box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
+  box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
+}
+ready.css:1
+80% {
+  opacity: 1;
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+ready.css:1
+100% {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+}
+
+.card:hover{
+  z-index: 999;
+  max-height: 800px;
+  width: 400px;
+  max-width: 400px;
+  border: none !important;
+  border-right: 60px solid transparent !important;
+  border-bottom: 20px solid transparent !important;
+  margin-right: -20px;
+  -webkit-transform:  translate(-30px, -50px);
+  transform:  translate(-30px, -50px);
+}
+
+.card:before{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  -webkit-transition: -webkit-box-shadow 0.6s ease;
+  transition: -webkit-box-shadow 0.6s ease;
+  transition: box-shadow 0.6s ease;
+  transition: box-shadow 0.6s ease, -webkit-box-shadow 0.6s ease;
+}
+
+.card:hover:before
+{
+  max-width: 300px;
+  -webkit-box-shadow: 60px 60px 20px RGBA(142, 142, 142, .6);
+  box-shadow: 60px 60px 20px RGBA(142, 142, 142, .6);
+}
+
+.card:hover .card-img-top{
+  height: 300px;
+}
+
+.card:hover .card-block {
+  width: 300px;
+  background-image: -webkit-gradient(linear,right bottom, left top,from(rgb(72, 85, 108)),color-stop(50%, rgb(27, 33, 43)),color-stop(51%, rgb(20, 25, 34)),to(rgb(53, 59, 69)));
+  background-image: linear-gradient(to top left,rgb(72, 85, 108) 0%,rgb(27, 33, 43) 50%,rgb(20, 25, 34) 51%,rgb(53, 59, 69) 100%);
+}
+
+.card:hover .card-title{
+  color: white;
+}
+
+.card:hover .card-text{
+  display: block !important;
+  color: white;
+}
+
+.card-block{
+  background-color: transparent;
+  background-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(37.8%, rgb(245, 245, 245)),color-stop(48.8%, rgb(245, 245, 245)),color-stop(53.1%, rgb(254, 254, 254)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75)));
+  background-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%);
+  background-repeat: no-repeat;
+}
+
+.card-text {
+  display: none;
+}
+
+.card-img-top{
+  width: 300px;
+  height: 250px;
+  background-color: #fff;
+  -webkit-transition: height 0.8s ease;
+  transition: height 0.8s ease;
+}
+
+@media (max-width: 1120px){
+  .bar-cont{
+    width: 100%;
+  }
+  .news-block{
+    max-width: 720px;
+  }
+  .card:hover{
+    margin-right: -20px;
+  }
+  .card:hover .card-block{
+    width: 300px;
+  }
+}
+
+@media (max-width: 800px){
+  .news-block{
+    min-width: 380px;
+  }
+  .card:hover{
+    border-left: 20px solid transparent !important;
+    margin-right: -40px;
+    -webkit-transform:  translate(0, -50px);
+    transform:  translate(0, -50px);
+  }
+  .card:hover:before{
+    -webkit-box-shadow: 0px 60px 40px RGBA(142, 142, 142, .5);
+    box-shadow: 0px 60px 40px RGBA(142, 142, 142, .5);
+  }
+  .card:hover .card-block{
+    width: 300px;
+  }
+}
+
+@media (max-width: 580px){
+  .news-block{
+    max-width: 380px;
+  }
+}
+/*-----------------
+Pixel Grid
+------------------*/
+.pixel-grid{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: 15;
+  opacity: .2;
+  display: none;
+}
+#toggle-grid{
+  position: fixed;
+  top: 150px;
+  right: 2px;
+  z-index: 16;
+  color: white;
+  display: inline-block;
+  /*border: 2px ridge white;*/
+  font-size: 1.8em;
+  width: 1.8em;
+  text-align: center;
+  line-height: 1.85em;
+  background: #666;
+  border-radius: 50%;
+  opacity: .3;
+  -webkit-transition: background 1s ease-out;
+  transition: background 1s ease-out;
+  display: none;
+}
+#toggle-grid:hover{
+  cursor: pointer;
+  background: repeating-linear-gradient(to bottom right,rgb(0, 0, 0) 0%,rgb(226, 226, 226) 61.4%,rgb(226, 226, 226) 66.9%,rgb(226, 226, 226) 76.6%,rgb(226, 226, 226) 88.7%,rgb(255, 255, 255) 100%);
+}
+.orange{
+  color: orange !important;
+  -webkit-box-shadow: 2px 2px 3px #888;
+  box-shadow: 2px 2px 3px #888;
+  opacity: 1 !important;
 }
 </style>
 
