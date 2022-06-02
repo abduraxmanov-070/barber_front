@@ -7,7 +7,7 @@
           <div class="col-md-8 text-center">
 
             <div class="mb-5 element-animate">
-              <h1 class="mb-4">Galireya</h1>
+              <h1 class="mb-4">Galareya</h1>
             </div>
           </div>
         </div>
@@ -91,10 +91,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 ">
-            <div class="card"  v-for="item in videos" v-bind:key="item.id">
+            <div class="card" >
               <div class="card-image">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe width="280" height="157" src="{{item.url}}" frameborder="0" allowfullscreen></iframe>
+                  <iframe width="280" height="157" src="https://www.youtube.com/embed/DQ6Cjq6diLk" frameborder="0" allowfullscreen></iframe>
                   <div class="content">
                     <h1>The Timbers</h1>
                   </div>

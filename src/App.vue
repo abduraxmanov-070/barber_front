@@ -26,7 +26,7 @@
                 <router-link class="nav-link active" to="/booking">Navbat</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link active" to="/contact">Bo'lanish</router-link>
+                <router-link class="nav-link active" to="/contact">Bog'lanish</router-link>
               </li>
             </ul>
           </div>
