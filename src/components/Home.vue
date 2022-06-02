@@ -84,7 +84,7 @@
             <div class="media d-block media-feature text-center">
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-moustache"></span></div>
               <div class="media-body">
-                <h3>Mustache Expert</h3>
+                <h3>Soqol olish</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem nulla odio iure animi repellat voluptates ullam omnis enim?</p>
               </div>
             </div>
@@ -97,7 +97,7 @@
             <div class="media d-block media-feature text-center">
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-scissors"></span></div>
               <div class="media-body">
-                <h3>Haircut Styler</h3>
+                <h3>Soch stillari</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem nulla odio iure animi repellat voluptates ullam omnis enim?</p>
               </div>
             </div>
@@ -107,7 +107,7 @@
             <div class="media d-block media-feature text-center">
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-razor"></span></div>
               <div class="media-body">
-                <h3>Razor For Beards</h3>
+                <h3>Soqollar uchun ustara</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem nulla odio iure animi repellat voluptates ullam omnis enim?</p>
               </div>
             </div>
@@ -116,7 +116,7 @@
             <div class="media d-block media-feature text-center">
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-hair-comb"></span></div>
               <div class="media-body">
-                <h3>Haircomb</h3>
+                <h3>Soch taroqlari</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem nulla odio iure animi repellat voluptates ullam omnis enim?</p>
               </div>
             </div>
@@ -133,8 +133,8 @@
             <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo btn-video"><span class="fa fa-play"></span></a>
           </div>
           <div class="col-md-6 pl-md-5">
-            <h3>Good Looking Style</h3>
-            <p class="lead">Start with us today</p>
+            <h3>Yaxshi ko'rinish uslubi</h3>
+            <p class="lead">Bugun bizdan boshlang</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facere a excepturi quod impedit rerum ipsum totam incidunt, necessitatibus id veritatis maiores quos saepe dolore commodi magnam fugiat. Incidunt, omnis.</p>
             <p>Nobis quae eaque facere architecto eligendi, voluptas quasi, blanditiis aperiam possimus inventore quis nam! Cupiditate necessitatibus, voluptatem excepturi placeat exercitationem quos vitae ut vero dolorem, provident sit odio porro facere.</p>
           </div>
