@@ -11,19 +11,19 @@
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
               <li class="nav-item">
-                <router-link class="nav-link active" to="/">Bosh sahifa</router-link>
+                <router-link class="nav-link active reload" to="/">Bosh sahifa</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link active" to="/hairstyle">Xizmatlar</router-link>
+                <router-link class="nav-link active reload" to="/hairstyle">Xizmatlar</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link active" to="/about">Biz haqimizda</router-link>
+                <router-link class="nav-link active reload" to="/about">Biz haqimizda</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link active" to="/gallery">Galareya</router-link>
+                <router-link class="nav-link active reload" to="/gallery">Galareya</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link active" to="/sertificate">Sertifikatlar</router-link>
+                <router-link class="nav-link active reload" to="/sertificate">Sertifikatlar</router-link>
               </li>
               <li class="nav-item">
                 <router-link class="nav-link active" to="/contact">Bog'lanish</router-link>
@@ -99,13 +99,11 @@
       </div>
     </footer>
     <!-- END footer -->
-<!--    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>-->
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
 
   </div>
 
 </template>
-
 <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>
 <script>
 import './assets/js/jquery-3.2.1.min';

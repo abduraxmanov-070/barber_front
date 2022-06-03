@@ -12,7 +12,7 @@
       </div>
     </section>
     <!-- END section -->
-    <section class="quick-info element-animate" data-animate-effect="fadeInLeft">
+    <section class="quick-info element-animate" data-animate-effect="fadeInLeft" style="position: absolute; width: 85%; top: 87%;">
       <div class="container"  style="position: relative; left: 15%;">
         <div class="row">
           <div class="col-lg-8 bgcolor">
@@ -50,7 +50,7 @@
       </div>
     </section>
     <!--========Cards========-->
-    <div class="container-fluid main-cont">
+    <div class="container-fluid main-cont" style="margin-top: 8rem;">
       <div class="row news-row">
         <div class="container-fluid col-md-12 col-sm-6 justify-content-center news-block">
           <div class="card-group">
