@@ -2,10 +2,10 @@
   <div class="hello">
     <section class="site-hero overlay" data-stellar-background-ratio="0.5" :style="{backgroundImage: 'url('+require('../assets/images/big_image_1.jpg')+')'}">
       <div class="container">
-        <div class="row align-items-center site-hero-inner justify-content-center">
+        <div class="row align-items-center site-hero-inner justify-content-end">
           <div class="col-md-8 text-center">
             <div class="mb-5 element-animate">
-              <h1 class="mb-4 " >Xizmatlar</h1>
+              <h1 class="mb-4">Xizmatlar</h1>
             </div>
           </div>
         </div>
@@ -13,7 +13,7 @@
     </section>
     <!-- END section -->
     <section class="quick-info element-animate" data-animate-effect="fadeInLeft">
-      <div class="container">
+      <div class="container" style="margin-left: 10rem;">
         <div class="row">
           <div class="col-lg-8 bgcolor">
             <div class="row">
@@ -58,9 +58,11 @@
               <div class="card">
 <!--                <div class="card-img-top" :style="{backgroundImage: 'url('+require('http://barber.amusoft.uz/photo/'+item['photo'])+')'}"></div>-->
 <!--                http://barber.amusoft.uz/photo/1654175891.jpg-->
-                <img :src="'http://barber.amusoft.uz/photo/'+ item['photo']" class="card__image" alt="" style="width: 400px; height: 300px " />
+                <img :src="'http://barber.amusoft.uz/photo/'+ item['photo']" class="card__image" alt="" style="width: 300px; height: 300px " />
                 <div class="card-block" >
-                  <h5 class="card-title" style="font-family: 'Anton', sans-serif">Canon Unveil<hr></h5>
+                    <h5 class="card-title" style="font-family: 'Anton', sans-serif">Sartarosh: {{ item['barber']['barber_name'] }}<hr></h5>
+                    <h5 class="card-title" style="font-family: 'Anton', sans-serif">Xizmat: {{ item['services_name'] }}<hr></h5>
+                    <h5 class="card-title" style="font-family: 'Anton', sans-serif">Narxi: {{ item['cost'] }}<hr></h5>
                 </div>
               </div>
             </div>
