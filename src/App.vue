@@ -91,13 +91,13 @@
       </div>
     </footer>
     <!-- END footer -->
+<!--    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>-->
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
 
   </div>
 
-
-
 </template>
+
 <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>
 <script>
 import './assets/js/jquery-3.2.1.min';
@@ -120,6 +120,7 @@ export default {
 @import "assets/fonts/ionicons/css/ionicons.min.css";
 @import "assets/fonts/fontawesome/css/font-awesome.min.css";
 @import "assets/fonts/flaticon/font/flaticon.css";
+
 @import "assets/css/style.css";
 @import "assets/css/bootstrap.css";
 @import "assets/css/animate.css";

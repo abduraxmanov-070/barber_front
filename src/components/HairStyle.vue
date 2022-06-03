@@ -2,7 +2,7 @@
   <div class="hello">
     <section class="site-hero overlay" data-stellar-background-ratio="0.5" :style="{backgroundImage: 'url('+require('../assets/images/big_image_1.jpg')+')'}">
       <div class="container">
-        <div class="row align-items-center site-hero-inner justify-content-end">
+        <div class="row align-items-center site-hero-inner justify-content-center" style="position: relative; left: 15%;">
           <div class="col-md-8 text-center">
             <div class="mb-5 element-animate">
               <h1 class="mb-4">Xizmatlar</h1>
@@ -13,7 +13,7 @@
     </section>
     <!-- END section -->
     <section class="quick-info element-animate" data-animate-effect="fadeInLeft">
-      <div class="container" style="margin-left: 10rem;">
+      <div class="container"  style="position: relative; left: 15%;">
         <div class="row">
           <div class="col-lg-8 bgcolor">
             <div class="row">
