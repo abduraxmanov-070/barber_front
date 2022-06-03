@@ -80,11 +80,19 @@
           <div class="col-md-3">
             <h3>Ulanishlar</h3>
             <p>
-              <a href="#" class="p-2"><span class="fa fa-facebook"></span></a>
-              <a href="#" class="p-2"><span class="fa fa-twitter"></span></a>
-              <a href="#" class="p-2"><span class="fa fa-instagram"></span></a>
-              <a href="#" class="p-2"><span class="fa fa-youtube"></span></a>
-              <a href="#" class="p-2"><span class="fa fa-telegram"></span></a>
+              <a href="#" class="p-3"><span class="fa fa-facebook">  Facebook</span></a>
+              <br>
+              <br>
+              <a href="#" class="p-3"><span class="fa fa-twitter">  Twitter</span></a>
+              <br>
+              <br>
+              <a href="#" class="p-3"><span class="fa fa-instagram">  Instagram</span></a>
+              <br>
+              <br>
+              <a href="#" class="p-3"><span class="fa fa-youtube">  YouTube</span></a>
+              <br>
+              <br>
+              <a href="#" class="p-3"><span class="fa fa-telegram">  Telegram</span></a>
             </p>
           </div>
         </div>

@@ -23,7 +23,7 @@
                   <div class="mr-3 icon-wrap"><span class="icon ion-ios-telephone"></span></div>
                   <div class="media-body">
                     <h5>+998 00 000 00 00</h5>
-                    <p>Biz bilan bog'lanish : 7/24</p>
+                    <h5>Biz bilan bog'lanish : 7/24</h5>
                   </div>
                 </div>
               </div>
@@ -32,7 +32,7 @@
                   <div class="mr-3 icon-wrap"><span class="icon ion-location"></span></div>
                   <div class="media-body">
                     <h5>101 uy</h5>
-                    <p>Al-Xorazmiy k, Urganch sh, Xorazm v, O'zbekiston</p>
+                    <h5>Al-Xorazmiy k, Urganch sh, Xorazm v, O'zbekiston</h5>
                   </div>
                 </div>
               </div>
@@ -40,8 +40,8 @@
                 <div class="media">
                   <div class="mr-3 icon-wrap"><span class="icon ion-android-time"></span></div>
                   <div class="media-body">
-                    <h5>Ish vaqti: 08:00 - 20:00 pm</h5>
-                    <p>Ish kunlari Dush-Shan <br> Dam olish : Yak</p>
+                    <h5>Ish vaqti: 09:00 - 21:00 pm</h5>
+                    <h5>Ish kunlari Dush-Shan <br> Dam olish : Yak</h5>
                   </div>
                 </div>
               </div>

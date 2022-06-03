@@ -23,7 +23,7 @@
                   <div class="mr-3 icon-wrap"><span class="icon ion-ios-telephone"></span></div>
                   <div class="media-body">
                     <h5>+998 00 000 00 00</h5>
-                    <p>Biz bilan bog'lanish : 7/24</p>
+                    <h5>Biz bilan bog'lanish : 7/24</h5>
                   </div>
                 </div>
               </div>
@@ -32,7 +32,7 @@
                   <div class="mr-3 icon-wrap"><span class="icon ion-location"></span></div>
                   <div class="media-body">
                     <h5>101 uy</h5>
-                    <p>Al-Xorazmiy k, Urganch sh, Xorazm v, O'zbekiston</p>
+                    <h5>Al-Xorazmiy k, Urganch sh, Xorazm v, O'zbekiston</h5>
                   </div>
                 </div>
               </div>
@@ -40,8 +40,8 @@
                 <div class="media">
                   <div class="mr-3 icon-wrap"><span class="icon ion-android-time"></span></div>
                   <div class="media-body">
-                    <h5>Ish vaqti: 08:00 - 20:00 pm</h5>
-                    <p>Ish kunlari Dush-Shan <br> Dam olish : Yak</p>
+                    <h5>Ish vaqti: 09:00 - 21:00 pm</h5>
+                    <h5>Ish kunlari Dush-Shan <br> Dam olish : Yak</h5>
                   </div>
                 </div>
               </div>
@@ -56,7 +56,6 @@
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center">
             <h2>Sartaroshlar xususiyati:</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum magnam illum maiores adipisci pariatur, eveniet.</p>
           </div>
         </div>
         <div class="row">
@@ -66,7 +65,7 @@
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-scissors-1"></span></div>
               <div class="media-body">
                 <h3>Yuvish &amp; Kesish</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem nulla odio iure animi repellat voluptates ullam omnis enim?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem </p>
               </div>
             </div>
 
@@ -76,7 +75,7 @@
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-cream"></span></div>
               <div class="media-body">
                 <h3>Krem &amp; Shampun</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem nulla odio iure animi repellat voluptates ullam omnis enim?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem </p>
               </div>
             </div>
           </div>
@@ -85,7 +84,7 @@
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-moustache"></span></div>
               <div class="media-body">
                 <h3>Soqol olish</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem nulla odio iure animi repellat voluptates ullam omnis enim?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem </p>
               </div>
             </div>
           </div>
@@ -98,7 +97,7 @@
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-scissors"></span></div>
               <div class="media-body">
                 <h3>Soch stillari</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem nulla odio iure animi repellat voluptates ullam omnis enim?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem </p>
               </div>
             </div>
 
@@ -107,8 +106,8 @@
             <div class="media d-block media-feature text-center">
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-razor"></span></div>
               <div class="media-body">
-                <h3>Soqollar uchun ustara</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem nulla odio iure animi repellat voluptates ullam omnis enim?</p>
+                <h3>Soqol uchun ustara</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem </p>
               </div>
             </div>
           </div>
@@ -117,7 +116,7 @@
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-hair-comb"></span></div>
               <div class="media-body">
                 <h3>Soch taroqlari</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem nulla odio iure animi repellat voluptates ullam omnis enim?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem </p>
               </div>
             </div>
           </div>
