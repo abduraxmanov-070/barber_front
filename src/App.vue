@@ -40,7 +40,7 @@
     <footer class="site-footer">
       <div class="container">
         <div class="row mb-5">
-          <div class="col-md-4">
+          <div class="col-md-5">
             <h3 class="mb-4">Ma'lumotlar</h3>
             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, quod!</p>
             <ul class="list-unstyled ">
@@ -49,7 +49,7 @@
               <li class="d-flex"><span class="mr-3"><span class="icon ion-email"></span></span><span class="">barber@gmail.com</span></li>
             </ul>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <h3 class="mb-4">Bog'lanishlar</h3>
             <ul class="list-unstyled ">
               <li><router-link to="/">Bosh sahifa</router-link></li>
@@ -77,22 +77,23 @@
 <!--              </li>-->
 <!--            </ul>-->
 <!--          </div>-->
-          <div class="col-md-4">
+          <div class="4">
             <h3>Ulanishlar</h3>
             <p>
-              <a href="#" class="p-3"><span class="fa fa-facebook">  Facebook</span></a>
+              <br>
+              <a href="https://www.facebook.com/" class="p-3"><span class="fa fa-facebook">  Facebook</span></a>
               <br>
               <br>
-              <a href="#" class="p-3"><span class="fa fa-twitter">  Twitter</span></a>
+              <a href="https://twitter.com/" class="p-3"><span class="fa fa-twitter">  Twitter</span></a>
               <br>
               <br>
-              <a href="#" class="p-3"><span class="fa fa-instagram">  Instagram</span></a>
+              <a href="https://www.instagram.com/" class="p-3"><span class="fa fa-instagram">  Instagram</span></a>
               <br>
               <br>
-              <a href="#" class="p-3"><span class="fa fa-youtube">  YouTube</span></a>
+              <a href="https://www.youtube.com/" class="p-3"><span class="fa fa-youtube">  YouTube</span></a>
               <br>
               <br>
-              <a href="#" class="p-3"><span class="fa fa-telegram">  Telegram</span></a>
+              <a href="https://www.telegram.com/" class="p-3"><span class="fa fa-telegram">  Telegram</span></a>
             </p>
           </div>
         </div>

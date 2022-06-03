@@ -40,7 +40,7 @@
                 <div class="media">
                   <div class="mr-3 icon-wrap"><span class="icon ion-android-time"></span></div>
                   <div class="media-body">
-                    <h5>Ish vaqti: 09:00 - 21:00 pm</h5>
+                    <h5>Ish vaqti: 09:00 - 21:00 </h5>
                     <h5>Ish kunlari Dush-Shan <br> Dam olish : Yak</h5>
                   </div>
                 </div>
@@ -209,7 +209,7 @@
                   <input type="date" id="day" class="form-control" min="2022-06-02" name="day" required v-model="day">
                 </div>
                 <div class="col-md-6 form-group">
-                  <label for="start_time">Bandlik vaqti</label>
+                  <label for="start_time">Vaqti</label>
                   <input type="time" id="start_time" class="form-control" name="start_time" required v-model="start_time">
                 </div>
               </div>
@@ -230,22 +230,6 @@
       </div>
     </section>
     <!-- END section -->
-
-    <!-- END section -->
-<!--<table border="1px">-->
-<!--  <tr>-->
-<!--    <td>barber_id</td>-->
-<!--    <td>cost</td>-->
-<!--    <td>services</td>-->
-<!--  </tr>-->
-<!--  <tr v-for="item in list" v-bind:key="item.id">-->
-<!--    <td>{{item.barber_id}}</td>-->
-<!--    <td>{{item.cost}}</td>-->
-<!--    <td>{{item.services_name}}</td>-->
-<!--  </tr>-->
-<!--</table>-->
-
-
   </div>
 </template>
 
@@ -254,14 +238,12 @@ import Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import {VueRecaptcha} from 'vue-recaptcha';
-
 Vue.use(VueAxios, axios).use(VueRecaptcha);
 export default {
   name: 'booking',
   components: {VueRecaptcha},
   methods: {
     mxSubmit() {
-
       if (this.client_name && this.client_phone_number && this.day && this.barber_id && this.start_time && this.recaptcha)
         $('#form').submit();
       else this.form = false;
@@ -307,8 +289,8 @@ export default {
         this.after_tomorrow = resp.data;
       })
   }
-
 }
+
 </script>
 
 <style scoped>

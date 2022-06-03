@@ -40,7 +40,7 @@
                 <div class="media">
                   <div class="mr-3 icon-wrap"><span class="icon ion-android-time"></span></div>
                   <div class="media-body">
-                    <h5>Ish vaqti: 09:00 - 21:00 pm</h5>
+                    <h5>Ish vaqti: 09:00 - 21:00 </h5>
                     <h5>Ish kunlari Dush-Shan <br> Dam olish : Yak</h5>
                   </div>
                 </div>
