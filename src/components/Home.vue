@@ -124,6 +124,7 @@
       </div>
     </section>
     <!-- END section -->
+
     <section class="page-contain">
       <div class="data-card text-center" v-if="today.length > 0">
         <h3>{{ today[0]['day ']}} </h3>
@@ -337,9 +338,9 @@ tr:hover{
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background: sandybrown;
+  background: #351D17;
   border: 0.75em solid white;
-  padding: 2em;
+  padding: 1em;
   font-family: 'Open Sans', sans-serif;
 }
 .data-card {

@@ -49,7 +49,7 @@
               <li class="d-flex"><span class="mr-3"><span class="icon ion-email"></span></span><span class="">barber@gmail.com</span></li>
             </ul>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-4">
             <h3 class="mb-4">Bog'lanishlar</h3>
             <ul class="list-unstyled ">
               <li><router-link to="/">Bosh sahifa</router-link></li>
@@ -60,24 +60,24 @@
               <li><router-link to="/contact">Bog'lanish</router-link></li>
             </ul>
           </div>
-          <div class="col-md-3">
-            <h3 class="mb-4">Eng so'nggi blog</h3>
-            <ul class="list-unstyled blog-entry-footer">
-              <li><a href="#">
-                <span class="post-meta">March 20, 2018</span>
-                <h3>7 Best Destination in The World</h3></a>
-              </li>
-              <li><a href="#">
-                <span class="post-meta">March 20, 2018</span>
-                <h3>4 Hour Work Week And The Rest Is Travel</h3></a>
-              </li>
-              <li><a href="#">
-                <span class="post-meta">March 20, 2018</span>
-                <h3>Why You Should Travel Today</h3></a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3">
+<!--          <div class="col-md-3">-->
+<!--            <h3 class="mb-4">Eng so'nggi blog</h3>-->
+<!--            <ul class="list-unstyled blog-entry-footer">-->
+<!--              <li><a href="#">-->
+<!--                <span class="post-meta">March 20, 2018</span>-->
+<!--                <h3>7 Best Destination in The World</h3></a>-->
+<!--              </li>-->
+<!--              <li><a href="#">-->
+<!--                <span class="post-meta">March 20, 2018</span>-->
+<!--                <h3>4 Hour Work Week And The Rest Is Travel</h3></a>-->
+<!--              </li>-->
+<!--              <li><a href="#">-->
+<!--                <span class="post-meta">March 20, 2018</span>-->
+<!--                <h3>Why You Should Travel Today</h3></a>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+          <div class="col-md-4">
             <h3>Ulanishlar</h3>
             <p>
               <a href="#" class="p-3"><span class="fa fa-facebook">  Facebook</span></a>
