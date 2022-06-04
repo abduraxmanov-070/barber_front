@@ -6,13 +6,11 @@
           <div class="col-md-8 text-center">
             <div class="mb-5 element-animate">
             </div>
-
           </div>
         </div>
       </div>
     </section>
     <!-- END section -->
-
     <section class="quick-info element-animate" data-animate-effect="fadeInLeft">
       <div class="container">
         <div class="row">
@@ -60,7 +58,6 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-
             <div class="media d-block media-feature text-center">
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-scissors-1"></span></div>
               <div class="media-body">
@@ -68,7 +65,6 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem </p>
               </div>
             </div>
-
           </div>
           <div class="col-md-4">
             <div class="media d-block media-feature text-center">
@@ -89,10 +85,8 @@
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-md-4">
-
             <div class="media d-block media-feature text-center">
               <div class="mr-3 icon-wrap"><span class="custom-icon flaticon-scissors"></span></div>
               <div class="media-body">
@@ -100,7 +94,6 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, assumenda rem </p>
               </div>
             </div>
-
           </div>
           <div class="col-md-4">
             <div class="media d-block media-feature text-center">
@@ -124,7 +117,6 @@
       </div>
     </section>
     <!-- END section -->
-
     <section class="page-contain">
       <div class="data-card text-center" v-if="today.length > 0">
         <h3>{{ today[0]['day ']}} </h3>
@@ -142,7 +134,7 @@
           </tr>
         </table>
       </div>
-      <a href="" class="data-card text-center" v-if="tomorrow.length > 0">
+      <a class="data-card text-center" v-if="tomorrow.length > 0">
         <h3>{{ tomorrow[0]['day '] }}</h3>
         <h4>Mijozlar</h4>
         <table border="1px" class="w-100 table-bordered text-black">
@@ -158,7 +150,7 @@
           </tr>
         </table>
       </a>
-      <a href="" class="data-card text-center" v-if="after_tomorrow.length > 0">
+      <a  class="data-card text-center" v-if="after_tomorrow.length > 0">
         <h3>{{ after_tomorrow[0]['day '] }}</h3>
         <h4>Mijozlar</h4>
         <table border="1px" class="w-100 table-bordered text-black">
@@ -175,7 +167,6 @@
         </table>
       </a>
     </section>
-
     <!--    booking form-->
     <section class="site-section">
       <div class="container">
@@ -206,7 +197,7 @@
               <div class="row">
                 <div class="col-md-6 form-group">
                   <label for="day">Sana</label>
-                  <input type="date" id="day" class="form-control" min="2022-06-02" name="day" required v-model="day">
+                  <input type="date" id="day" class="form-control" name="day" required v-model="day">
                 </div>
                 <div class="col-md-6 form-group">
                   <label for="start_time">Vaqti</label>
@@ -271,7 +262,6 @@ export default {
             };
             Vue.axios.post("http://barber.amusoft.uz/api/bookings", booking)
               .then(response => response.json());
-            // $('#form').submit();
           }
           else Vue.swal.fire({
             title: 'Xatolik!!!',
@@ -279,8 +269,6 @@ export default {
             icon: 'error',
             confirmButtonText: 'OK'
           });
-            // this.$swal('Bu vaqtda mijoz mavjud!');
-
     },
     mxVerify(response) {
       this.recaptcha = response;
@@ -316,38 +304,12 @@ export default {
         this.tomorrow = resp['data']['tomorrow'];
         this.after_tomorrow = resp['data']['after_tomorrow'];
       })
-    // Vue.axios.get('http://barber.amusoft.uz/api/today')
-    //   .then((resp) => {
-    //     this.today = resp.data;
-    //   })
-    // Vue.axios.get('http://barber.amusoft.uz/api/tomorrow')
-    //   .then((resp) => {
-    //     this.tomorrow = resp.data;
-    //   })
-    // Vue.axios.get('http://barber.amusoft.uz/api/after_tomorrow')
-    //   .then((resp) => {
-    //     this.after_tomorrow = resp.data;
-    //   })
   }
 }
 
 </script>
 
 <style scoped>
-/*h1, h2 {*/
-/*  font-weight: normal;*/
-/*}*/
-/*ul {*/
-/*  list-style-type: none;*/
-/*  padding: 0;*/
-/*}*/
-/*li {*/
-/*  display: inline-block;*/
-/*  margin: 0 10px;*/
-/*}*/
-/*a {*/
-/*  color: #42b983;*/
-/*}*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
 * {
   box-sizing: border-box;
@@ -424,24 +386,6 @@ tr:hover{
 .data-card .link-text svg path {
   transition: fill 0.45s ease;
 }
-/*.data-card:hover {*/
-/*  !*background: #753bbd;*!*/
-/*  transform: scale(1.02);*/
-/*}*/
-/*.data-card:hover h3 {*/
-/*  color: #fff;*/
-/*  border-bottom-color: #a754c4;*/
-/*}*/
-/*.data-card:hover h4 {*/
-/*  color: #fff;*/
-/*}*/
-/*.data-card:hover p {*/
-/*  opacity: 1;*/
-/*  transform: none;*/
-/*}*/
-/*.data-card:hover .link-text {*/
-/*  color: #fff;*/
-/*}*/
 .data-card:hover .link-text svg {
   animation: point 1.25s infinite alternate;
 }

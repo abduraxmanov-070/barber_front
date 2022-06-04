@@ -4,7 +4,6 @@
       <div class="container">
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
-
             <div class="mb-5 element-animate">
               <h1 class="mb-4">Biz haqimizda</h1>
             </div>
@@ -55,14 +54,10 @@
     <section class="site-section pb-5">
       <div class="container">
         <div class="row mb-5 justify-content-center">
-<!--          <div class="col-md-8 text-center">-->
-<!--            <h1>Team</h1>-->
-<!--            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quia tempore magni dolore dolorum reprehenderit illum consectetur minima</p>-->
-<!--          </div>-->
         </div>
           <div class="row" v-for="item in barbers" v-bind:key="item.id">
             <div class="col-md-6 video-wrap mb-5">
-              <img :src="'http://barber.amusoft.uz/photo/'+ item['barber_photo']"  alt="Image placeholder" class="img-fluid">
+              <img :src="'http://barber.amusoft.uz/photo/'+ item['barber_photo']"  alt="Image placeholder" class="img-fluid w-75 h-75">
             </div>
           <div class="col-md-6 pl-md-5">
             <h3>{{item['barber_name']}}</h3>
@@ -79,14 +74,6 @@
 </template>
 
 <script>
-// export default {
-//   name: 'about',
-//   data () {
-//     return {
-//       msg: 'Welcome to About page'
-//     }
-//   }
-// }
 import Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';

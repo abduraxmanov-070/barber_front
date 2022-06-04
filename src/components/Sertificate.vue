@@ -5,7 +5,6 @@
       <div class="container">
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
-
             <div class="mb-5 element-animate">
               <h1 class="mb-4">Sertifikatlar</h1>
             </div>
@@ -51,12 +50,13 @@
       </div>
     </section>
     <!--    //cards styles-->
-    <section >
+    <section>
       <div class="container">
         <ul class="cards">
           <li v-for="item in photos" v-bind:key="item.id">
             <a href="" class="card">
-              <img :src="'http://barber.amusoft.uz/sertifikat/'+ item.url" class="card__image" alt="" style="width: 400px; height: 300px " />
+              <img :src="'http://barber.amusoft.uz/sertifikat/'+ item.url" class="card__image" alt=""
+                   style="width: 400px; height: 300px "/>
             </a>
           </li>
         </ul>
@@ -75,7 +75,7 @@ Vue.use(VueAxios, axios)
 export default {
   name: 'sertificate',
   data() {
-    return {photos: undefined , videos: undefined}
+    return {photos: undefined, videos: undefined}
   },
   mounted() {
     Vue.axios.get('http://barber.amusoft.uz/api/certificates')

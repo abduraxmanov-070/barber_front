@@ -2,7 +2,8 @@
   <div class="hello">
     <section class="site-hero overlay" data-stellar-background-ratio="0.5" :style="{backgroundImage: 'url('+require('../assets/images/big_image_1.jpg')+')'}">
       <div class="container">
-        <div class="row align-items-center site-hero-inner justify-content-center" style="position: relative; left: 15%;">
+        <div class="row align-items-center site-hero-inner justify-content-center"
+             style="position: relative; left: 15%;">
           <div class="col-md-8 text-center">
             <div class="mb-5 element-animate">
               <h1 class="mb-4">Xizmatlar</h1>
@@ -12,8 +13,9 @@
       </div>
     </section>
     <!-- END section -->
-    <section class="quick-info element-animate" data-animate-effect="fadeInLeft" style="position: absolute; width: 85%; top: 87%;">
-      <div class="container"  style="position: relative; left: 15%;">
+    <section class="quick-info element-animate" data-animate-effect="fadeInLeft"
+             style="position: absolute; width: 85%; top: 87%;">
+      <div class="container" style="position: relative; left: 15%;">
         <div class="row">
           <div class="col-lg-8 bgcolor">
             <div class="row">
@@ -56,17 +58,23 @@
           <div class="card-group">
             <div class="underlay" v-for="item in services" v-bind:key="item.id">
               <div class="card">
-<!--                <div class="card-img-top" :style="{backgroundImage: 'url('+require('http://barber.amusoft.uz/photo/'+item['photo'])+')'}"></div>-->
-<!--                http://barber.amusoft.uz/photo/1654175891.jpg-->
-                <img :src="'http://barber.amusoft.uz/photo/'+ item['photo']" class="card__image" alt="" style="width: 300px; height: 300px " />
-                <div class="card-block" >
-                    <h5 class="card-title" style="font-family: 'Anton', sans-serif">Sartarosh: {{ item['barber']['barber_name'] }}<hr></h5>
-                    <h5 class="card-title" style="font-family: 'Anton', sans-serif">Xizmat: {{ item['services_name'] }}<hr></h5>
-                    <h5 class="card-title" style="font-family: 'Anton', sans-serif">Narxi: {{ item['cost'] }}<hr></h5>
+                <img :src="'http://barber.amusoft.uz/photo/'+ item['photo']" class="card__image" alt=""
+                     style="width: 300px; height: 300px "/>
+                <div class="card-block">
+                  <h5 class="card-title" style="font-family: 'Anton', sans-serif">Sartarosh:
+                    {{ item['barber']['barber_name'] }}
+                    <hr>
+                  </h5>
+                  <h5 class="card-title" style="font-family: 'Anton', sans-serif">Xizmat: {{ item['services_name'] }}
+                    <hr>
+                  </h5>
+                  <h5 class="card-title" style="font-family: 'Anton', sans-serif">Narxi: {{ item['cost'] }}
+                    <hr>
+                  </h5>
                 </div>
               </div>
             </div>
-            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -82,7 +90,7 @@ Vue.use(VueAxios, axios)
 export default {
   name: 'hairstyle',
   data() {
-    return {services: undefined , }
+    return {services: undefined,}
   },
   mounted() {
     Vue.axios.get('http://barber.amusoft.uz/api/services')
@@ -92,8 +100,8 @@ export default {
   }
 }
 var main = function () {
-  $('.push-bar').on('click', function(event){
-    if (!isClicked){
+  $('.push-bar').on('click', function (event) {
+    if (!isClicked) {
       event.preventDefault();
       $('.arrow').trigger('click');
       isClicked = true;
@@ -103,15 +111,15 @@ var main = function () {
   $('.arrow').css({
     'animation': 'bounce 2s infinite'
   });
-  $('.arrow').on("mouseenter", function(){
+  $('.arrow').on("mouseenter", function () {
     $('.arrow').css({
       'animation': '',
       'transform': 'rotate(180deg)',
       'background-color': 'black'
     });
   });
-  $('.arrow').on("mouseleave", function(){
-    if (!isClicked){
+  $('.arrow').on("mouseleave", function () {
+    if (!isClicked) {
       $('.arrow').css({
         'transform': 'rotate(0deg)',
         'background-color': 'black'
@@ -121,8 +129,8 @@ var main = function () {
 
   var isClicked = false;
 
-  $('.arrow').on("click", function(){
-    if (!isClicked){
+  $('.arrow').on("click", function () {
+    if (!isClicked) {
       isClicked = true;
       $('.arrow').css({
         'transform': 'rotate(180deg)',
@@ -135,14 +143,10 @@ var main = function () {
       $('.main-cont').animate({
         top: "0px"
       }, 300);
-      // $('.news-block').css({'border': '0'});
-      // $('.underlay').slideDown(1000);
-
-    }
-    else if (isClicked){
+    } else if (isClicked) {
       isClicked = false;
       $('.arrow').css({
-        'transform': 'rotate(0deg)',       'background-color': 'black'
+        'transform': 'rotate(0deg)', 'background-color': 'black'
       });
 
       $('.bar-cont').animate({
@@ -152,14 +156,14 @@ var main = function () {
         top: "-215px"
       }, 300);
     }
-    console.log('isClicked= '+isClicked);
+    console.log('isClicked= ' + isClicked);
   });
 
-  $('.card').on('mouseenter', function() {
+  $('.card').on('mouseenter', function () {
     $(this).find('.card-text').slideDown(300);
   });
 
-  $('.card').on('mouseleave', function(event) {
+  $('.card').on('mouseleave', function (event) {
     $(this).find('.card-text').css({
       'display': 'none'
     });
@@ -170,65 +174,70 @@ $(document).ready(main);
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped >
+<style scoped>
 h1, h2 {
   font-weight: normal;
   text-align: center;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }
-*{
+
+* {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-html{
+html {
   overflow-y: scroll;
 }
 
-body{
+body {
   background-color: transparent;
-  background:  fixed no-repeat;
+  background: fixed no-repeat;
   background-size: cover;
   max-height: 300rem;
   border: 15px solid transparent !important;
-  -o-border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
-  border-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(37.8%, rgb(245, 245, 245)),color-stop(48.8%, rgb(245, 245, 245)),color-stop(53.1%, rgb(254, 254, 254)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
-  border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
+  -o-border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.75) 0%, rgba(245, 245, 245, 0.75) 0%, rgba(245, 245, 245, 0.75) 16.6%, rgb(245, 245, 245) 37.8%, rgb(245, 245, 245) 48.8%, rgb(254, 254, 254) 53.1%, rgba(245, 245, 245, 0.75) 79.4%, rgba(245, 245, 245, 0.75) 84.3%) !important;
+  border-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.75)), color-stop(0%, rgba(245, 245, 245, 0.75)), color-stop(16.6%, rgba(245, 245, 245, 0.75)), color-stop(37.8%, rgb(245, 245, 245)), color-stop(48.8%, rgb(245, 245, 245)), color-stop(53.1%, rgb(254, 254, 254)), color-stop(79.4%, rgba(245, 245, 245, 0.75)), color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
+  border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.75) 0%, rgba(245, 245, 245, 0.75) 0%, rgba(245, 245, 245, 0.75) 16.6%, rgb(245, 245, 245) 37.8%, rgb(245, 245, 245) 48.8%, rgb(254, 254, 254) 53.1%, rgba(245, 245, 245, 0.75) 79.4%, rgba(245, 245, 245, 0.75) 84.3%) !important;
   border-image-slice: 1 !important;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
   opacity: 0.95;
 }
 
-a:hover{
+a:hover {
   opacity: 1;
   color: black;
 }
+
 /*----------------
 Push Bar
 ------------------*/
-.bar-cont{
+.bar-cont {
   position: relative;
   top: -215px;
 }
 
-.push-bar{
+.push-bar {
   position: relative;
   margin: auto;
   width: 500px;
@@ -237,7 +246,7 @@ Push Bar
   border-bottom-right-radius: 5px;
 }
 
-.creator{
+.creator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,7 +259,7 @@ Push Bar
   justify-content: center;
 }
 
-.creator #codepen{
+.creator #codepen {
   text-align: center;
   font-size: 180px;
   margin-top: 30px;
@@ -261,7 +270,7 @@ Push Bar
 }
 
 
-.arrow{
+.arrow {
   margin: auto;
   padding: 0;
   margin-top: 50px;
@@ -314,10 +323,11 @@ Push Bar
     transform: translateY(-15px);
   }
 }
+
 /*-----------------
 Cards
 ------------------*/
-.main-cont{
+.main-cont {
   padding: 0;
   margin: 0;
   top: -215px;
@@ -329,16 +339,16 @@ Cards
   margin-bottom: 50px;
 }
 
-.news-block{
+.news-block {
   margin: auto;
   padding: 0;
   background-color: transparent;
   max-width: 1060px;
   min-width: 100px;
   border: 20px solid transparent;
-  -o-border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
-  border-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(37.8%, rgb(245, 245, 245)),color-stop(48.8%, rgb(245, 245, 245)),color-stop(53.1%, rgb(254, 254, 254)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
-  border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
+  -o-border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.75) 0%, rgba(245, 245, 245, 0.75) 0%, rgba(245, 245, 245, 0.75) 16.6%, rgb(245, 245, 245) 37.8%, rgb(245, 245, 245) 48.8%, rgb(254, 254, 254) 53.1%, rgba(245, 245, 245, 0.75) 79.4%, rgba(245, 245, 245, 0.75) 84.3%) !important;
+  border-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.75)), color-stop(0%, rgba(245, 245, 245, 0.75)), color-stop(16.6%, rgba(245, 245, 245, 0.75)), color-stop(37.8%, rgb(245, 245, 245)), color-stop(48.8%, rgb(245, 245, 245)), color-stop(53.1%, rgb(254, 254, 254)), color-stop(79.4%, rgba(245, 245, 245, 0.75)), color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
+  border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.75) 0%, rgba(245, 245, 245, 0.75) 0%, rgba(245, 245, 245, 0.75) 16.6%, rgb(245, 245, 245) 37.8%, rgb(245, 245, 245) 48.8%, rgb(254, 254, 254) 53.1%, rgba(245, 245, 245, 0.75) 79.4%, rgba(245, 245, 245, 0.75) 84.3%) !important;
   border-image-slice: 1 !important;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
@@ -348,7 +358,7 @@ Cards
   animation-duration: 1s;
 }
 
-.underlay{
+.underlay {
   /*display: none;*/
   margin: 0;
   padding: 0;
@@ -356,16 +366,16 @@ Cards
   max-width: 340px;
 }
 
-.card{
+.card {
   margin: 0;
   width: 340px;
   max-height: 350px;
   max-width: 340px;
   background-color: transparent;
   border: 20px solid transparent !important;
-  -o-border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
-  border-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
-  border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
+  -o-border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.75) 0%, rgba(245, 245, 245, 0.75) 0%, rgba(245, 245, 245, 0.75) 16.6%, rgba(245, 245, 245, 0.75) 79.4%, rgba(245, 245, 245, 0.75) 84.3%) !important;
+  border-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.75)), color-stop(0%, rgba(245, 245, 245, 0.75)), color-stop(16.6%, rgba(245, 245, 245, 0.75)), color-stop(79.4%, rgba(245, 245, 245, 0.75)), color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
+  border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.75) 0%, rgba(245, 245, 245, 0.75) 0%, rgba(245, 245, 245, 0.75) 16.6%, rgba(245, 245, 245, 0.75) 79.4%, rgba(245, 245, 245, 0.75) 84.3%) !important;
   border-image-slice: 1 !important;
   -webkit-transition: -webkit-transform 0.6s ease;
   transition: -webkit-transform 0.6s ease;
@@ -380,64 +390,108 @@ Cards
 @-webkit-keyframes blockAppear {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(20px) ;
-    transform: translateY(20px) ;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
   }
-ready.css:1
-40% {
-  opacity: 0;
-  -webkit-transform: translateY(20px);
-  transform: translateY(20px);
-  -webkit-box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
-  box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
+ready . css: 1 40 %
+
+{
+  opacity: 0
+;
+  -webkit-transform: translateY(20px)
+;
+  transform: translateY(20px)
+;
+  -webkit-box-shadow: 0 10px 35px rgba(0, 0, 0, .15), 0 1px 0 rgba(0, 0, 0, .15)
+;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, .15), 0 1px 0 rgba(0, 0, 0, .15)
+;
 }
-ready.css:1
-80% {
-  opacity: 1;
-  -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
+ready.css:
+
+1
+80
+%
+{
+  opacity: 1
+;
+  -webkit-transform: translateY(-5px)
+;
+  transform: translateY(-5px)
+;
 }
-ready.css:1
-100% {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-box-shadow: none;
-  box-shadow: none;
+ready.css:
+
+1
+100
+%
+{
+  opacity: 1
+;
+  -webkit-transform: translateY(0)
+;
+  transform: translateY(0)
+;
+  -webkit-box-shadow: none
+;
+  box-shadow: none
+;
 }
 }
 
 @keyframes blockAppear {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(20px) ;
-    transform: translateY(20px) ;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
   }
-ready.css:1
-40% {
-  opacity: 0;
-  -webkit-transform: translateY(20px);
-  transform: translateY(20px);
-  -webkit-box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
-  box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
+ready . css: 1 40 %
+
+{
+  opacity: 0
+;
+  -webkit-transform: translateY(20px)
+;
+  transform: translateY(20px)
+;
+  -webkit-box-shadow: 0 10px 35px rgba(0, 0, 0, .15), 0 1px 0 rgba(0, 0, 0, .15)
+;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, .15), 0 1px 0 rgba(0, 0, 0, .15)
+;
 }
-ready.css:1
-80% {
-  opacity: 1;
-  -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
+ready.css:
+
+1
+80
+%
+{
+  opacity: 1
+;
+  -webkit-transform: translateY(-5px)
+;
+  transform: translateY(-5px)
+;
 }
-ready.css:1
-100% {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-box-shadow: none;
-  box-shadow: none;
+ready.css:
+
+1
+100
+%
+{
+  opacity: 1
+;
+  -webkit-transform: translateY(0)
+;
+  transform: translateY(0)
+;
+  -webkit-box-shadow: none
+;
+  box-shadow: none
+;
 }
 }
 
-.card:hover{
+.card:hover {
   z-index: 999;
   max-height: 800px;
   width: 400px;
@@ -446,11 +500,11 @@ ready.css:1
   border-right: 60px solid transparent !important;
   border-bottom: 20px solid transparent !important;
   margin-right: -20px;
-  -webkit-transform:  translate(-30px, -50px);
-  transform:  translate(-30px, -50px);
+  -webkit-transform: translate(-30px, -50px);
+  transform: translate(-30px, -50px);
 }
 
-.card:before{
+.card:before {
   -webkit-box-shadow: none;
   box-shadow: none;
   display: block;
@@ -465,36 +519,35 @@ ready.css:1
   transition: box-shadow 0.6s ease, -webkit-box-shadow 0.6s ease;
 }
 
-.card:hover:before
-{
+.card:hover:before {
   max-width: 300px;
   -webkit-box-shadow: 60px 60px 20px RGBA(142, 142, 142, .6);
   box-shadow: 60px 60px 20px RGBA(142, 142, 142, .6);
 }
 
-.card:hover .card-img-top{
+.card:hover .card-img-top {
   height: 300px;
 }
 
 .card:hover .card-block {
   width: 300px;
-  background-image: -webkit-gradient(linear,right bottom, left top,from(rgb(72, 85, 108)),color-stop(50%, rgb(27, 33, 43)),color-stop(51%, rgb(20, 25, 34)),to(rgb(53, 59, 69)));
-  background-image: linear-gradient(to top left,rgb(72, 85, 108) 0%,rgb(27, 33, 43) 50%,rgb(20, 25, 34) 51%,rgb(53, 59, 69) 100%);
+  background-image: -webkit-gradient(linear, right bottom, left top, from(rgb(72, 85, 108)), color-stop(50%, rgb(27, 33, 43)), color-stop(51%, rgb(20, 25, 34)), to(rgb(53, 59, 69)));
+  background-image: linear-gradient(to top left, rgb(72, 85, 108) 0%, rgb(27, 33, 43) 50%, rgb(20, 25, 34) 51%, rgb(53, 59, 69) 100%);
 }
 
-.card:hover .card-title{
+.card:hover .card-title {
   color: white;
 }
 
-.card:hover .card-text{
+.card:hover .card-text {
   display: block !important;
   color: white;
 }
 
-.card-block{
+.card-block {
   background-color: transparent;
-  background-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(37.8%, rgb(245, 245, 245)),color-stop(48.8%, rgb(245, 245, 245)),color-stop(53.1%, rgb(254, 254, 254)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75)));
-  background-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.75)), color-stop(0%, rgba(245, 245, 245, 0.75)), color-stop(16.6%, rgba(245, 245, 245, 0.75)), color-stop(37.8%, rgb(245, 245, 245)), color-stop(48.8%, rgb(245, 245, 245)), color-stop(53.1%, rgb(254, 254, 254)), color-stop(79.4%, rgba(245, 245, 245, 0.75)), color-stop(84.3%, rgba(245, 245, 245, 0.75)));
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.75) 0%, rgba(245, 245, 245, 0.75) 0%, rgba(245, 245, 245, 0.75) 16.6%, rgb(245, 245, 245) 37.8%, rgb(245, 245, 245) 48.8%, rgb(254, 254, 254) 53.1%, rgba(245, 245, 245, 0.75) 79.4%, rgba(245, 245, 245, 0.75) 84.3%);
   background-repeat: no-repeat;
 }
 
@@ -502,7 +555,7 @@ ready.css:1
   display: none;
 }
 
-.card-img-top{
+.card-img-top {
   width: 300px;
   height: 250px;
   background-color: #fff;
@@ -510,49 +563,56 @@ ready.css:1
   transition: height 0.8s ease;
 }
 
-@media (max-width: 1120px){
-  .bar-cont{
+@media (max-width: 1120px) {
+  .bar-cont {
     width: 100%;
   }
-  .news-block{
+
+  .news-block {
     max-width: 720px;
   }
-  .card:hover{
+
+  .card:hover {
     margin-right: -20px;
   }
-  .card:hover .card-block{
+
+  .card:hover .card-block {
     width: 300px;
   }
 }
 
-@media (max-width: 800px){
-  .news-block{
+@media (max-width: 800px) {
+  .news-block {
     min-width: 380px;
   }
-  .card:hover{
+
+  .card:hover {
     border-left: 20px solid transparent !important;
     margin-right: -40px;
-    -webkit-transform:  translate(0, -50px);
-    transform:  translate(0, -50px);
+    -webkit-transform: translate(0, -50px);
+    transform: translate(0, -50px);
   }
-  .card:hover:before{
+
+  .card:hover:before {
     -webkit-box-shadow: 0px 60px 40px RGBA(142, 142, 142, .5);
     box-shadow: 0px 60px 40px RGBA(142, 142, 142, .5);
   }
-  .card:hover .card-block{
+
+  .card:hover .card-block {
     width: 300px;
   }
 }
 
-@media (max-width: 580px){
-  .news-block{
+@media (max-width: 580px) {
+  .news-block {
     max-width: 380px;
   }
 }
+
 /*-----------------
 Pixel Grid
 ------------------*/
-.pixel-grid{
+.pixel-grid {
   position: fixed;
   top: 0;
   left: 0;
@@ -563,7 +623,8 @@ Pixel Grid
   opacity: .2;
   display: none;
 }
-#toggle-grid{
+
+#toggle-grid {
   position: fixed;
   top: 150px;
   right: 2px;
@@ -582,11 +643,13 @@ Pixel Grid
   transition: background 1s ease-out;
   display: none;
 }
-#toggle-grid:hover{
+
+#toggle-grid:hover {
   cursor: pointer;
-  background: repeating-linear-gradient(to bottom right,rgb(0, 0, 0) 0%,rgb(226, 226, 226) 61.4%,rgb(226, 226, 226) 66.9%,rgb(226, 226, 226) 76.6%,rgb(226, 226, 226) 88.7%,rgb(255, 255, 255) 100%);
+  background: repeating-linear-gradient(to bottom right, rgb(0, 0, 0) 0%, rgb(226, 226, 226) 61.4%, rgb(226, 226, 226) 66.9%, rgb(226, 226, 226) 76.6%, rgb(226, 226, 226) 88.7%, rgb(255, 255, 255) 100%);
 }
-.orange{
+
+.orange {
   color: orange !important;
   -webkit-box-shadow: 2px 2px 3px #888;
   box-shadow: 2px 2px 3px #888;

@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <section class="site-hero overlay" data-stellar-background-ratio="0.5" :style="{backgroundImage: 'url('+require('../assets/images/big_image_1.jpg')+')'}">
+    <section class="site-hero overlay" data-stellar-background-ratio="0.5"
+             :style="{backgroundImage: 'url('+require('../assets/images/big_image_1.jpg')+')'}">
       <div class="container">
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
@@ -11,7 +12,6 @@
         </div>
       </div>
     </section>
-
     <section class="quick-info element-animate" data-animate-effect="fadeInLeft">
       <div class="container">
         <div class="row">
@@ -69,7 +69,6 @@
                   <input type="email" id="email" class="form-control" name="email" required v-model="email">
                 </div>
               </div>
-
               <div class="row">
                 <div class="col-md-12 form-group">
                   <label for="message">Xabar yozish</label>
@@ -92,11 +91,10 @@
 <script>
 
 import Vue from "vue";
-
 export default {
   name: 'contact',
-  methods:{
-    mxSubmit(){
+  methods: {
+    mxSubmit() {
       let contact = {
         name: this.name,
         title: this.title,
@@ -117,7 +115,7 @@ export default {
       $('#message').val('');
     }
   },
-  data () {
+  data() {
     return {
       msg: 'Welcome to Contact page'
     }
@@ -130,14 +128,17 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }

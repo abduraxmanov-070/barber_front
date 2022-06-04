@@ -60,23 +60,6 @@
               <li><router-link to="/contact">Bog'lanish</router-link></li>
             </ul>
           </div>
-<!--          <div class="col-md-3">-->
-<!--            <h3 class="mb-4">Eng so'nggi blog</h3>-->
-<!--            <ul class="list-unstyled blog-entry-footer">-->
-<!--              <li><a href="#">-->
-<!--                <span class="post-meta">March 20, 2018</span>-->
-<!--                <h3>7 Best Destination in The World</h3></a>-->
-<!--              </li>-->
-<!--              <li><a href="#">-->
-<!--                <span class="post-meta">March 20, 2018</span>-->
-<!--                <h3>4 Hour Work Week And The Rest Is Travel</h3></a>-->
-<!--              </li>-->
-<!--              <li><a href="#">-->
-<!--                <span class="post-meta">March 20, 2018</span>-->
-<!--                <h3>Why You Should Travel Today</h3></a>-->
-<!--              </li>-->
-<!--            </ul>-->
-<!--          </div>-->
           <div class="4">
             <h3>Ulanishlar</h3>
             <p>
@@ -101,7 +84,6 @@
     </footer>
     <!-- END footer -->
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-
   </div>
 
 </template>
