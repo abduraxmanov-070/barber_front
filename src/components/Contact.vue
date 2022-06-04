@@ -58,22 +58,22 @@
               <div class="row">
                 <div class="col-md-4 form-group">
                   <label for="name">F.I.O</label>
-                  <input type="text" id="name" class="form-control" name="name" required>
+                  <input type="text" id="name" class="form-control" name="name" required v-model="name">
                 </div>
                 <div class="col-md-4 form-group">
                   <label for="title">Mavzu</label>
-                  <input type="text" id="title" class="form-control" name="title" required>
+                  <input type="text" id="title" class="form-control" name="title" required v-model="title">
                 </div>
                 <div class="col-md-4 form-group">
                   <label for="email">Email</label>
-                  <input type="email" id="email" class="form-control" name="email" required>
+                  <input type="email" id="email" class="form-control" name="email" required v-model="email">
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-md-12 form-group">
                   <label for="message">Xabar yozish</label>
-                  <textarea name="message" id="message" class="form-control " cols="30" rows="8" required></textarea>
+                  <textarea name="message" id="message" class="form-control " cols="30" rows="8" required v-model="message"></textarea>
                 </div>
               </div>
               <div class="row">
@@ -97,13 +97,24 @@ export default {
   name: 'contact',
   methods:{
     mxSubmit(){
+      let contact = {
+        name: this.name,
+        title: this.title,
+        email: this.email,
+        message: this.message,
+      };
+      Vue.axios.post("http://barber.amusoft.uz/api/contacts", contact)
+        .then(response => response.json());
       Vue.swal.fire({
         // title: 'Xatolik!!!',
         text: "Xabar jo'natildi",
         icon: 'success',
         confirmButtonText: 'OK'
       });
-      $('#form').submit();
+      $('#name').val('');
+      $('#title').val('');
+      $('#email').val('');
+      $('#message').val('');
     }
   },
   data () {

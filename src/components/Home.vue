@@ -262,7 +262,16 @@ export default {
               icon: 'success',
               confirmButtonText: 'OK'
             });
-            $('#form').submit();
+            let booking = {
+              client_name: this.client_name,
+              client_phone_number: this.client_phone_number,
+              barber_id: this.barber_id,
+              day: this.day,
+              start_time: this.start_time,
+            };
+            Vue.axios.post("http://barber.amusoft.uz/api/bookings", booking)
+              .then(response => response.json());
+            // $('#form').submit();
           }
           else Vue.swal.fire({
             title: 'Xatolik!!!',
