@@ -276,18 +276,24 @@ export default {
       .then((resp) => {
         this.barbers = resp.data;
       })
-    Vue.axios.get('http://barber.amusoft.uz/api/today')
+    Vue.axios.get('http://barber.amusoft.uz/api/days')
       .then((resp) => {
-        this.today = resp.data;
+        this.today = resp['data']['today'];
+        this.tomorrow = resp['data']['tomorrow'];
+        this.after_tomorrow = resp['data']['after_tomorrow'];
       })
-    Vue.axios.get('http://barber.amusoft.uz/api/tomorrow')
-      .then((resp) => {
-        this.tomorrow = resp.data;
-      })
-    Vue.axios.get('http://barber.amusoft.uz/api/after_tomorrow')
-      .then((resp) => {
-        this.after_tomorrow = resp.data;
-      })
+    // Vue.axios.get('http://barber.amusoft.uz/api/today')
+    //   .then((resp) => {
+    //     this.today = resp.data;
+    //   })
+    // Vue.axios.get('http://barber.amusoft.uz/api/tomorrow')
+    //   .then((resp) => {
+    //     this.tomorrow = resp.data;
+    //   })
+    // Vue.axios.get('http://barber.amusoft.uz/api/after_tomorrow')
+    //   .then((resp) => {
+    //     this.after_tomorrow = resp.data;
+    //   })
   }
 }
 
