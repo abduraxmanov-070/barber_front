@@ -54,26 +54,26 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <form action="http://barber.amusoft.uz/api/contacts" method="post">
+            <form action="http://barber.amusoft.uz/api/contacts" method="post" id="form" @submit.prevent="mxSubmit">
               <div class="row">
                 <div class="col-md-4 form-group">
                   <label for="name">F.I.O</label>
-                  <input type="text" id="name" class="form-control" name="name">
+                  <input type="text" id="name" class="form-control" name="name" required>
                 </div>
                 <div class="col-md-4 form-group">
                   <label for="title">Mavzu</label>
-                  <input type="text" id="title" class="form-control" name="title">
+                  <input type="text" id="title" class="form-control" name="title" required>
                 </div>
                 <div class="col-md-4 form-group">
                   <label for="email">Email</label>
-                  <input type="email" id="email" class="form-control" name="email">
+                  <input type="email" id="email" class="form-control" name="email" required>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-md-12 form-group">
                   <label for="message">Xabar yozish</label>
-                  <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
+                  <textarea name="message" id="message" class="form-control " cols="30" rows="8" required></textarea>
                 </div>
               </div>
               <div class="row">
@@ -90,8 +90,22 @@
 </template>
 
 <script>
+
+import Vue from "vue";
+
 export default {
   name: 'contact',
+  methods:{
+    mxSubmit(){
+      Vue.swal.fire({
+        // title: 'Xatolik!!!',
+        text: "Xabar jo'natildi",
+        icon: 'success',
+        confirmButtonText: 'OK'
+      });
+      $('#form').submit();
+    }
+  },
   data () {
     return {
       msg: 'Welcome to Contact page'

@@ -134,4 +134,5 @@ export default {
 @import "assets/css/magnific-popup.css";
 @import "assets/css/owl.carousel.min.css";
 
+@import "sweetalert2/dist/sweetalert2.min.css";
 </style>

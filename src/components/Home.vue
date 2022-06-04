@@ -210,7 +210,7 @@
                 </div>
                 <div class="col-md-6 form-group">
                   <label for="start_time">Vaqti</label>
-                  <input type="time" id="start_time" class="form-control" name="start_time" required v-model="start_time">
+                  <input type="time" id="start_time" class="form-control" min="09:00" max="21:00" name="start_time" required v-model="start_time">
                 </div>
               </div>
               <div class="pb-2">
@@ -244,9 +244,34 @@ export default {
   components: {VueRecaptcha},
   methods: {
     mxSubmit() {
+      // console.log(this.list);
+      let bookings = this.list;
+      let s = 0;
+      console.log(bookings);
       if (this.client_name && this.client_phone_number && this.day && this.barber_id && this.start_time && this.recaptcha)
-        $('#form').submit();
-      else this.form = false;
+        for (let i = 0; i < bookings.length; i++) {
+          if ((this.barber_id == bookings[i]['barber']['id'] && this.day == bookings[i]['day '] && this.start_time+':00' == bookings[i]['start_time  '])) {
+            s++;
+            break;
+          }
+        }
+          if (s == 0) {
+            Vue.swal.fire({
+              // title: 'Xatolik!!!',
+              text: 'Band qilindi',
+              icon: 'success',
+              confirmButtonText: 'OK'
+            });
+            $('#form').submit();
+          }
+          else Vue.swal.fire({
+            title: 'Xatolik!!!',
+            text: 'Bu vaqtda mijoz mavjud!',
+            icon: 'error',
+            confirmButtonText: 'OK'
+          });
+            // this.$swal('Bu vaqtda mijoz mavjud!');
+
     },
     mxVerify(response) {
       this.recaptcha = response;
