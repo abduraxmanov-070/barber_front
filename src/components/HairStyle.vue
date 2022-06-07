@@ -59,16 +59,15 @@
             <div class="underlay" v-for="item in services" v-bind:key="item.id">
               <div class="card">
                 <img :src="'http://barber.amusoft.uz/photo/'+ item['photo']" class="card__image" alt=""
-                     style="width: 300px; height: 300px "/>
+                     style="width: 300px; height: 260px "/>
                 <div class="card-block">
-                  <h5 class="card-title" style="font-family: 'Anton', sans-serif">Sartarosh:
-                    {{ item['barber']['barber_name'] }}
+                  <h5 class="card-title" style="font-family: 'Anton', sans-serif">Sartarosh: {{ item['barber']['barber_name'] }}
                     <hr>
                   </h5>
                   <h5 class="card-title" style="font-family: 'Anton', sans-serif">Xizmat: {{ item['services_name'] }}
                     <hr>
                   </h5>
-                  <h5 class="card-title" style="font-family: 'Anton', sans-serif">Narxi: {{ item['cost'] }}
+                  <h5 class="card-title" style="font-family: 'Anton', sans-serif">Narxi: {{ item['cost'] }} so'm
                     <hr>
                   </h5>
                 </div>

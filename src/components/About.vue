@@ -60,7 +60,7 @@
               <img :src="'http://barber.amusoft.uz/photo/'+ item['barber_photo']"  alt="Image placeholder" class="img-fluid w-75 h-75">
             </div>
           <div class="col-md-6 pl-md-5">
-            <h3>{{item['barber_name']}}</h3>
+            <h3>Ismi: {{item['barber_name']}}</h3>
             <p class="lead">Expert Barber</p>
             <h3>Tel_nomer: {{item['barber_phone_number']}}</h3>
             <h3>Manzili: {{item['barber_home_adress']}}</h3>
